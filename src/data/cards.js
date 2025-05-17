@@ -62,7 +62,7 @@ const cards = [
     deadline: "September 2025",
   },
   {
-    img: "",
+    img: "img/img9.jpg",
     title: "",
     summary: "",
     detail: ``,
@@ -72,7 +72,7 @@ const cards = [
     deadline: "",
   },
   {
-    img: "",
+    img: "img/img10.png",
     title: "",
     summary: "",
     detail: ``,
@@ -82,7 +82,7 @@ const cards = [
     deadline: "",
   },
   {
-    img: "",
+    img: "img/img3.jpg",
     title: "",
     summary: "",
     detail: ``,
@@ -92,7 +92,7 @@ const cards = [
     deadline: "",
   },
   {
-    img: "",
+    img: "img/img1.jpg",
     title: "",
     summary: "",
     detail: ``,
@@ -102,7 +102,7 @@ const cards = [
     deadline: "",
   },
   {
-    img: "",
+    img: "img/img7.jpg",
     title: "",
     summary: "",
     detail: ``,
@@ -112,7 +112,7 @@ const cards = [
     deadline: "",
   },
   {
-    img: "",
+    img: "img/img8.jpg",
     title: "",
     summary: "",
     detail: ``,
@@ -122,7 +122,7 @@ const cards = [
     deadline: "",
   },
   {
-    img: "",
+    img: "img/img6.jpg",
     title: "",
     summary: "",
     detail: ``,
@@ -132,10 +132,29 @@ const cards = [
     deadline: "",
   },
   {
-    img: "",
+    img: "img/img4.jpg",
     title: "",
-    summary: "",
-    detail: ``,
+    summary:
+      "Tingkatkan kepercayaan diri, cara berkomunikasi, dan kepemimpinan melalui kelas interaktif. Cocok untuk mahasiswa atau fresh graduate yang ingin siap menghadapi dunia kerja.",
+    detail: `Pelatihan keterampilan non-teknis dari Program Kartu Prakerja untuk meningkatkan kesiapan kerja bagi mahasiswa dan fresh graduate.
+✅ Syarat Utama
+- WNI berusia ≥18 tahun.
+- Tidak sedang sekolah atau kuliah formal.
+- Tidak sedang menerima bantuan sosial pemerintah lain.
+- Diutamakan pencari kerja/pengangguran.
+🎁 Manfaat
+- Pelatihan keterampilan soft skill (public speaking, leadership, komunikasi).
+- Sertifikat penyelesaian dari lembaga pelatihan.
+- Insentif saldo pelatihan & pengisian survei.
+🗓️ Timeline 2025
+- Pendaftaran Gelombang: Setiap bulan
+- Pelatihan bisa dimulai setelah lolos gelombang
+- Waktu belajar: 1-4 minggu
+📝 Cara Daftar
+- Akses: prakerja.go.id
+- Verifikasi data & ikut seleksi gelombang
+- Pilih pelatihan di mitra (Skill Academy, Pintaria, dll)
+- Ikuti hingga selesai & dapatkan insentif`,
     kategori: "",
     jenjang: "",
     lokasi: "",
