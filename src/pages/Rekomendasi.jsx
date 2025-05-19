@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Card from "../components/Card";
-import PopupDetail from "../components/PopupDetail";
-import PopupSaved from "../components/PopupSaved";
+import Card from "../components/scholarshiphub/Card";
+import PopupDetail from "../components/scholarshiphub/PopupDetail";
+import PopupSaved from "../components/scholarshiphub/PopupSaved";
 import cards from "../data/cards";
 
 const Rekomendasi = () => {
@@ -55,7 +55,7 @@ const Rekomendasi = () => {
     <main>
       {/* Banner Header */}
       <section className="banner">
-        <img src="/img/Banner.png" alt="Banner Beasiswa" />
+        <img src="/img/scholarshiphub/Banner.png" alt="Banner Beasiswa" />
       </section>
 
       {/* Tombol kembali */}

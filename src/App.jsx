@@ -1,6 +1,6 @@
-import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import ProfilePage from "./pages/ProfilePage";
 import ScholarshipHub from "./pages/ScholarshipHub";
 import Rekomendasi from "./pages/Rekomendasi";
 import Footer from "./components/Footer";
@@ -11,6 +11,9 @@ function App() {
       <Navbar />
 
       <Routes>
+        <Route path="/" element={<h1>Home</h1>} />
+
+        <Route path="/profile" element={<ProfilePage />} />
 
         <Route path="/scholarshiphub" element={<ScholarshipHub />} />
 

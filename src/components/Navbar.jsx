@@ -21,7 +21,7 @@ const Navbar = () => {
       <a href="#">Edu Connect</a>
 
       {/* Ikon user */}
-      <a href="#">
+      <a href="/profile">
         <img src={userIcon} alt="User" className="user-icon" />
       </a>
     </nav>

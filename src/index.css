@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 @import "tailwindcss";
 
@@ -6,9 +7,11 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", "Manrope", sans-serif;
   color: #333;
   background-color: #f9f9f9;
 }
@@ -140,6 +143,65 @@ footer .copyright {
 }
 
 /* ========== GLOBAL STYLING ========== */
+
+/* ++++++++++ Profile Page ++++++++++ */
+
+/* Background Color Utilities */
+.bg-edurise-blue {
+  background-color: #3375cc;
+}
+
+.bg-edurise-red {
+  background-color: #ff3037;
+}
+
+.bg-edurise-lightBlue {
+  background-color: #ebf1fa;
+}
+
+.bg-edurise-white {
+  background-color: #ffffff;
+}
+
+/* Text Color Utilities */
+.text-edurise-darkBlue {
+  color: #17355c;
+}
+
+.text-edurise-navBlue {
+  color: #295ea3;
+}
+
+.text-edurise-gray {
+  color: #575858;
+}
+
+.text-edurise-darkGray {
+  color: #333333;
+}
+
+.text-edurise-textGray {
+  color: #5e5a5a;
+}
+
+.text-edurise-lightGray {
+  color: #bbbcbc;
+}
+
+/* Border Color Utilities */
+.border-edurise-blue {
+  border-color: #3375cc;
+}
+
+.border-edurise-red {
+  border-color: #ff3037;
+}
+
+.border-edurise-gray {
+  border-color: #575858;
+}
+
+/* ++++++++++ Scholarship Hub ++++++++++ */
 
 /* Banner */
 

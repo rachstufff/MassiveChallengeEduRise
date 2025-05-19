@@ -1,7 +1,7 @@
 // data/cards.js
 const cards = [
   {
-    img: "/img/img5.jpg",
+    img: "/img/scholarshiphub/img5.jpg",
     title: "Beasiswa Unggulan Kemendikbud",
     summary:
       "Beasiswa prestisius dari Kementerian Pendidikan dan Kebudayaan untuk putra-putri terbaik bangsa. Menawarkan pembiayaan penuh bagi mahasiswa S1 hingga S3 yang memiliki prestasi akademik maupun non-akademik.",
@@ -32,7 +32,7 @@ const cards = [
     deadline: "September 2025",
   },
   {
-    img: "/img/img2.jpg",
+    img: "/img/scholarshiphub/img2.jpg",
     title: "Beasiswa LPDP Reguler Dalam Negeri",
     summary:
       "Program beasiswa dari Kementerian Keuangan yang membiayai kuliah S2 atau S3 di universitas unggulan Indonesia. Dilengkapi dengan pembinaan kepemimpinan, pengembangan diri, dan jejaring nasional. Ideal untuk kamu yang ingin jadi agen perubahan Indonesia dari dalam negeri.",
@@ -62,7 +62,7 @@ const cards = [
     deadline: "September 2025",
   },
   {
-    img: "/img/img9.jpg",
+    img: "/img/scholarshiphub/img9.jpg",
     title: "Beasiswa Djarum Plus",
     summary:
       "Lebih dari sekadar bantuan dana pendidikan! Beasiswa ini memberikan pelatihan soft skill eksklusif seperti public speaking, leadership, dan project management. Dibuka untuk mahasiswa S1 semester 4 dari seluruh perguruan tinggi di Indonesia.",
@@ -90,7 +90,7 @@ const cards = [
     deadline: "September 2025",
   },
   {
-    img: "/img/img10.png",
+    img: "/img/scholarshiphub/img10.png",
     title: "Beasiswa Bank Indonesia",
     summary:
       "Program beasiswa yang tidak hanya mendanai biaya kuliah, juga membuka akses pelatihan, mentoring, dan jaringan kepemimpinan muda BI. Sangat cocok untuk mahasiswa yang ingin kontributif, dan punya cita-cita membangun negeri.",
@@ -118,7 +118,7 @@ const cards = [
     deadline: "September 2025",
   },
   {
-    img: "/img/img3.jpg",
+    img: "/img/scholarshiphub/img3.jpg",
     title: "Beasiswa Sobat Bumi Pertamina Foundation",
     summary:
       "Beasiswa untuk mahasiswa S1 aktif di berbagai perguruan tinggi negeri dan swasta. Diperuntukkan bagi mahasiswa berprestasi dan peduli lingkungan, dengan dukungan dana pendidikan dan pelatihan kepemimpinan berkelanjutan.",
@@ -146,7 +146,7 @@ const cards = [
     deadline: "September 2025",
   },
   {
-    img: "/img/img1.jpg",
+    img: "/img/scholarshiphub/img1.jpg",
     title: "Pelatihan Data Analyst Google",
     summary:
       "Program pelatihan bersertifikat resmi dari Google untuk karier di bidang analisis data. Cocok untuk pemula, dengan pendekatan praktis dan studi kasus, serta tersedia bahasa Indonesia untuk memudahkan pemahaman.",
@@ -176,7 +176,7 @@ const cards = [
     deadline: "Oktober 2025",
   },
   {
-    img: "/img/img7.jpg",
+    img: "/img/scholarshiphub/img7.jpg",
     title: "Beasiswa Baznas Cendikia",
     summary:
       "Beasiswa khusus untuk mahasiswa dari keluarga kurang mampu yang memiliki semangat belajar tinggi. Selain pembiayaan, kamu akan tergabung dalam komunitas sosial Baznas dan dibekali karakter serta kepemimpinan Islami.",
@@ -204,7 +204,7 @@ const cards = [
     deadline: "Oktober 2025",
   },
   {
-    img: "/img/img8.jpg",
+    img: "/img/scholarshiphub/img8.jpg",
     title: "Beasiswa Sahabat Guru",
     summary:
       "Beasiswa pendidikan dan pelatihan untuk calon guru dan pendidikan. Dirancang untuk mencetak tenaga pendidik muda kompeten, berdedikasi, dan siap berkontribusi bagi pendidikan Indonesia.",
@@ -233,7 +233,7 @@ const cards = [
     deadline: "Oktober 2025",
   },
   {
-    img: "/img/img6.jpg",
+    img: "/img/scholarshiphub/img6.jpg",
     title: "Program Magang Kampus Merdeka",
     summary:
       "Program beasiswa yang tidak hanya mendanai biaya kuliah, juga membuka akses pelatihan, mentoring, dan jaringan kepemimpinan muda. Sangat cocok untuk mahasiswa yang ingin aktif, kontributif, dan punya cita-cita membangun negeri.",
@@ -262,7 +262,7 @@ const cards = [
     deadline: "September 2025",
   },
   {
-    img: "/img/img4.jpg",
+    img: "/img/scholarshiphub/img4.jpg",
     title: "Pelatihan Soft Skill Prakerja",
     summary:
       "Tingkatkan kepercayaan diri, cara berkomunikasi, dan kepemimpinan melalui kelas interaktif. Cocok untuk mahasiswa atau fresh graduate yang ingin siap menghadapi dunia kerja.",
