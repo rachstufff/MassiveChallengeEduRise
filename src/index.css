@@ -65,6 +65,82 @@ nav a:hover {
   cursor: pointer;
 }
 
+/* Footer */
+footer {
+  background-color: #ffffff;
+  padding: 40px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 56px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer .branding {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+footer .branding img {
+  height: 40px;
+}
+
+footer .branding h3 {
+  font-size: 18px;
+}
+
+footer .column {
+  flex: 1;
+  min-width: 200px;
+}
+
+footer .column h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+footer .column p,
+footer .column a {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+footer .column a:hover {
+  color: #3375cc;
+  font-weight: 500;
+}
+
+footer .socials {
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+footer .socials a i {
+  font-size: 24px;
+  color: #666;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+footer .socials a i:hover {
+  color: #3375cc;
+  transform: scale(1.2);
+}
+
+footer .copyright {
+  text-align: center;
+  width: 100%;
+  font-size: 12px;
+  color: #999;
+}
+
+/* ========== GLOBAL STYLING ========== */
+
 /* Banner */
 
 .banner img {
@@ -187,80 +263,6 @@ main {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 16px;
-}
-
-/* Footer */
-footer {
-  background-color: #ffffff;
-  padding: 40px 32px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 56px;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-}
-
-footer .branding {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-
-footer .branding img {
-  height: 40px;
-}
-
-footer .branding h3 {
-  font-size: 18px;
-}
-
-footer .column {
-  flex: 1;
-  min-width: 200px;
-}
-
-footer .column h3 {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 16px;
-}
-
-footer .column p,
-footer .column a {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 8px;
-}
-
-footer .column a:hover {
-  color: #3375cc;
-  font-weight: 500;
-}
-
-footer .socials {
-  padding-top: 16px;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-footer .socials a i {
-  font-size: 24px;
-  color: #666;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-footer .socials a i:hover {
-  color: #3375cc;
-  transform: scale(1.2);
-}
-
-footer .copyright {
-  text-align: center;
-  width: 100%;
-  font-size: 12px;
-  color: #999;
 }
 
 /* ======== POPUP DETAIL CARD STYLING ========== */
