@@ -11,7 +11,7 @@ const ScholarshipHub = () => {
     kategori: "",
     jenjang: "",
     lokasi: "",
-    deadline: ""
+    deadline: "",
   });
 
   const [popupOpen, setPopupOpen] = useState(false);
@@ -32,15 +32,26 @@ const ScholarshipHub = () => {
   };
 
   const filteredData = cards.filter((item) => {
-    const matchKategori = filter.kategori ? item.kategori === filter.kategori : true;
-    const matchJenjang = filter.jenjang ? item.jenjang === filter.jenjang : true;
+    const matchKategori = filter.kategori
+      ? item.kategori === filter.kategori
+      : true;
+    const matchJenjang = filter.jenjang
+      ? item.jenjang === filter.jenjang
+      : true;
     const matchLokasi = filter.lokasi ? item.lokasi === filter.lokasi : true;
-    const matchDeadline = filter.deadline ? item.deadline === filter.deadline : true;
+    const matchDeadline = filter.deadline
+      ? item.deadline === filter.deadline
+      : true;
     return matchKategori && matchJenjang && matchLokasi && matchDeadline;
   });
 
   return (
     <main>
+      {/* Banner Header */}
+      <section className="banner">
+        <img src="/img/MainBanner.png" alt="Banner Beasiswa" />
+      </section>
+
       {/* Daftar Beasiswa */}
       <section className="content" style={{ marginTop: "48px" }}>
         {filteredData.length > 0 ? (
@@ -68,7 +79,6 @@ const ScholarshipHub = () => {
       <section className="recommended">
         <div className="recommended-title">
           <h1>Kamu Masih Bingung?</h1>
-          <p>Tenang! Kami bantu rekomendasikan program beasiswa terbaik untuk kamu.</p>
         </div>
         <button className="btn" onClick={() => setShowFilterPopup(true)}>
           Cari Rekomendasi
@@ -83,15 +93,12 @@ const ScholarshipHub = () => {
         saved={false}
         onSave={() => {
           setSaved(true);
-          setPopupOpen(false); // tutup detail saat simpan
+          setPopupOpen(false);
         }}
       />
 
       {/* Popup Tersimpan */}
-      <PopupSaved
-        show={saved}
-        onClose={() => setSaved(false)}
-      />
+      <PopupSaved show={saved} onClose={() => setSaved(false)} />
 
       {/* Popup Filter → langsung navigasi ke halaman rekomendasi */}
       <PopupFilter

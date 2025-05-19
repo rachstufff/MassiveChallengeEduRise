@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 @import "tailwindcss";
 
 * {
@@ -65,34 +66,16 @@ nav a:hover {
 }
 
 /* Banner */
-figure {
-  margin: 0;
-  position: relative;
-  text-align: center;
-  color: #fff;
-}
 
-.banner {
-  width: 100%;
-  height: auto;
-}
-
-figure h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 36px;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-figure .highlight {
-  color: #f4b400;
+.banner img {
+  display: block;
+  width: 100vw;
+  object-fit: cover;
 }
 
 /* Back Button */
 .back-btn {
+  margin-top: 24px;
   margin-bottom: 24px;
   padding-left: 16px;
 }
@@ -139,7 +122,7 @@ main {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 300px;
-  height: 640px;
+  height: 580px;
   display: flex;
   flex-direction: column;
 }
@@ -161,6 +144,8 @@ main {
 }
 
 .card-content h2 {
+  font-weight: 800;
+  font-size: 20px;
   margin-bottom: 8px;
   overflow: hidden;
   min-height: 110px;
