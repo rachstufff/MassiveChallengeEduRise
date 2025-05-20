@@ -1,3 +1,27 @@
+# How To Setup
+
+1. Clone repo/download ZIP
+
+2. Ekstrak foldernya
+
+3. Buka foldernya di VS Code dan Buka Terminal
+
+4. Jalankan perintah npm install lalu npm run dev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
