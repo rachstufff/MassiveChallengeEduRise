@@ -37,10 +37,7 @@ const AdminLogin = () => {
             >
               <ul className="navbar-nav nav-auto-layout">
                 <li className="nav-item">
-                  <a
-                    className="nav-link active fw-bold"
-                    href="landingbefore.html"
-                  >
+                  <a className="nav-link active fw-bold" href="/landingbefore">
                     HOME
                   </a>
                 </li>
@@ -153,7 +150,7 @@ const AdminLogin = () => {
                     </div>
                     <div className="d-grid gap-2 mt-4">
                       <Link
-                        to="/dashadmin"
+                        to="/adminhome"
                         className="btn btn-primary py-2 fw-bold"
                       >
                         Login
