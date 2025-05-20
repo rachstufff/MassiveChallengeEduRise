@@ -21,7 +21,9 @@ const Navbar = () => {
 
       <a href="#">Edurise Academy</a>
       <a href="#">Edu Events</a>
-      <a href="#">Edu Connect</a>
+
+      {/* Halaman Edu Connect */}
+      <Link to="/educonnect">Educonnect</Link>
 
       {/* Ikon user */}
       <a href="/profile">
