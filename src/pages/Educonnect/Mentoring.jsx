@@ -16,7 +16,7 @@ const Mentoring = () => {
               to="/forum"
               className="w-full bg-white flex flex-row items-center gap-3 p-5 rounded-xl shadow-sm"
             >
-              <img src="/assets/calendar.svg" alt="Forum" />
+              <img src="/img/educonnect/calendar.svg" alt="Forum" />
               <h2 className=" text-gray-600 font-medium text-base">Forum</h2>
             </Link>
           </div>
@@ -26,7 +26,7 @@ const Mentoring = () => {
               to="/diskusi"
               className="w-full bg-white flex flex-row items-center gap-3 p-5 rounded-xl shadow-sm"
             >
-              <img src="/assets/message-circle.svg" alt="Discuss" />
+              <img src="/img/educonnect/message-circle.svg" alt="Discuss" />
               <h2 className="text-gray-600 font-medium text-base">
                 Discuss Group
               </h2>
@@ -38,7 +38,7 @@ const Mentoring = () => {
               to="/mentoring"
               className="w-full bg-white flex flex-row items-center gap-3 p-5 rounded-xl shadow-sm"
             >
-              <img src="/assets/briefcase-blue.svg" alt="Mentoring" />
+              <img src="/img/educonnect/briefcase-blue.svg" alt="Mentoring" />
               <h2 className="text-blue-400 font-medium text-base">Mentoring</h2>
             </Link>
           </div>
@@ -55,13 +55,13 @@ const Mentoring = () => {
                 <div className="flex flex-row justify-between items-center w-full">
                   <p className="text-base">Tambah Mentoring baru</p>
                   <div className="flex items-center justify-center p-3 bg-blue-500 hover:bg-blue-600 rounded-xl h-full">
-                    <img src="/assets/plus.svg" alt="Tambah" />
+                    <img src="/img/educonnect/plus.svg" alt="Tambah" />
                   </div>
                 </div>
               </button>
               <button className="flex justify-center items-center bg-white rounded-xl p-2 shadow-sm">
                 <div className="flex items-center justify-center p-3.5 bg-yellow-400 hover:bg-yellow-500 rounded-xl">
-                  <img src="/assets/bookmark.svg" alt="Bookmark" />
+                  <img src="/img/educonnect/bookmark.svg" alt="Bookmark" />
                 </div>
               </button>
             </div>
@@ -79,14 +79,18 @@ const Mentoring = () => {
                   <div className="relative flex items-center justify-center p-3">
                     <div className="flex items-center justify-center overflow-hidden rounded-lg h-16 w-16">
                       <img
-                        src="assets/user_regis.svg"
+                        src="/img/educonnect/user_regis.svg"
                         alt=""
                         className="object-cover object-top h-full w-full"
                       />
                     </div>
 
                     <div className="absolute flex p-1 items-center justify-center left-0 bottom-0 bg-slate-700 rounded-md">
-                      <img src="assets/graduation.svg" alt="" className="h-5" />
+                      <img
+                        src="/img/educonnect/graduation.svg"
+                        alt=""
+                        className="h-5"
+                      />
                     </div>
                   </div>
 
@@ -108,7 +112,7 @@ const Mentoring = () => {
               </div>
 
               <div className="flex items-center flex-row gap-3 text-xl mt-7">
-                <img src="assets/peserta.svg" alt="" className="h-6" />
+                <img src="/img/educonnect/peserta.svg" alt="" className="h-6" />
                 70 Peserta
               </div>
 
@@ -125,7 +129,7 @@ const Mentoring = () => {
                     type="submit"
                     className="rounded-full bg-gray-300 hover:bg-gray-400 p-3.5"
                   >
-                    <img src="assets/bookmark.svg" alt="" />
+                    <img src="/img/educonnect/bookmark.svg" alt="" />
                   </button>
                 </form>
 
@@ -134,7 +138,7 @@ const Mentoring = () => {
                   target="_blank"
                   className="flex flex-row items-center justify-center p-3 bg-blue-500 hover:bg-blue-600 gap-2 text-white rounded-xl"
                 >
-                  <img src="assets/plus-circle.svg" alt="" />
+                  <img src="/img/educonnect/plus-circle.svg" alt="" />
                   Join Mentoring
                 </a>
               </div>
@@ -148,14 +152,18 @@ const Mentoring = () => {
                   <div className="relative flex items-center justify-center p-3">
                     <div className="flex items-center justify-center overflow-hidden rounded-lg h-16 w-16">
                       <img
-                        src="assets/user_regis.svg"
+                        src="/img/educonnect/user_regis.svg"
                         alt=""
                         className="object-cover object-top h-full w-full"
                       />
                     </div>
 
                     <div className="absolute flex p-1 items-center justify-center left-0 bottom-0 bg-slate-700 rounded-md">
-                      <img src="assets/graduation.svg" alt="" className="h-5" />
+                      <img
+                        src="/img/educonnect/graduation.svg"
+                        alt=""
+                        className="h-5"
+                      />
                     </div>
                   </div>
 
@@ -177,7 +185,7 @@ const Mentoring = () => {
               </div>
 
               <div className="flex items-center flex-row gap-3 text-xl mt-7">
-                <img src="assets/peserta.svg" alt="" className="h-6" />
+                <img src="/img/educonnect/peserta.svg" alt="" className="h-6" />
                 70 Peserta
               </div>
 
@@ -194,14 +202,22 @@ const Mentoring = () => {
                     type="submit"
                     className="rounded-full bg-yellow-400 hover:bg-yellow-500 p-4"
                   >
-                    <img src="assets/bookmark.svg" alt="" className="h-4" />
+                    <img
+                      src="/img/educonnect/bookmark.svg"
+                      alt=""
+                      className="h-4"
+                    />
                   </button>
                 </form>
                 <button
                   onClick={() => setShowEditModal(true)}
                   className="flex items-center gap-2 p-3 bg-yellow-400 hover:bg-yellow-500 text-white rounded-xl"
                 >
-                  <img src="/assets/edit.svg" alt="Edit" className="h-4" />
+                  <img
+                    src="/img/educonnect/edit.svg"
+                    alt="Edit"
+                    className="h-4"
+                  />
                   Edit Forum
                 </button>
                 <button
@@ -211,7 +227,7 @@ const Mentoring = () => {
                   <i className="fas fa-trash"></i>
                 </button>
                 <div className="flex items-center gap-2 text-gray-500">
-                  <img src="/assets/check.svg" alt="Created" />
+                  <img src="/img/educonnect/check.svg" alt="Created" />
                   <span className="text-sm">You created this Forum</span>
                 </div>
               </div>

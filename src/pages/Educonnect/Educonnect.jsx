@@ -29,7 +29,7 @@ const Educonnect = () => {
             </a>
           </div>
           <img
-            src="/assets/model_landing.png"
+            src="/img/educonnect/model_landing.png"
             alt="Landing Visual"
             className="w-[30rem] md:w-[32rem] md:m-0 m-[3rem]"
           />
@@ -44,7 +44,7 @@ const Educonnect = () => {
         >
           <div className="flex flex-col items-center md:items-start text-center md:text-start">
             <div className="bg-blue-500 rounded-full p-2 w-fit">
-              <img src="/assets/user.svg" alt="" />
+              <img src="/img/educonnect/user.svg" alt="" />
             </div>
             <h1 className="text-2xl mt-4 font-semibold">10K Total Mentor</h1>
             <h2 className="text-sm text-gray-400 mt-2">
@@ -53,7 +53,7 @@ const Educonnect = () => {
           </div>
           <div className="flex flex-col items-center md:items-start">
             <div className="bg-blue-500 rounded-full p-2 w-fit">
-              <img src="/assets/message-square.svg" alt="" />
+              <img src="/img/educonnect/message-square.svg" alt="" />
             </div>
             <h1 className="text-2xl mt-4 font-semibold">10K Total Mentor</h1>
             <h2 className="text-sm text-gray-400 mt-2">
@@ -62,7 +62,7 @@ const Educonnect = () => {
           </div>
           <div className="flex flex-col items-center md:items-start">
             <div className="bg-blue-500 rounded-full p-2 w-fit">
-              <img src="/assets/users.svg" alt="" />
+              <img src="/img/educonnect/users.svg" alt="" />
             </div>
             <h1 className="text-2xl mt-4 font-semibold">10K Total Mentor</h1>
             <h2 className="text-sm text-gray-400 mt-2">
@@ -76,7 +76,7 @@ const Educonnect = () => {
       <section className="md:w-full px-8 md:px-32 py-10 mt-72 md:mt-32 flex justify-center items-center">
         <div className="flex flex-col md:flex-row justify-between w-full items-center">
           <img
-            src="/assets/model-forum.png"
+            src="/img/educonnect/model-forum.png"
             alt=""
             className="rounded-[2rem]"
             style={{ boxShadow: "0 0 6px rgba(0, 0, 0, 0.3)" }}
@@ -92,15 +92,15 @@ const Educonnect = () => {
             </h2>
             <div className="flex flex-col md:flex-row justify-between mt-6 md:gap-0 gap-3">
               <div className="flex flex-row gap-2 items-center">
-                <img src="/assets/check.svg" alt="" />
+                <img src="/img/educonnect/check.svg" alt="" />
                 <h3 className="text-base text-gray-400">Teman Belajar</h3>
               </div>
               <div className="flex flex-row gap-2 items-center">
-                <img src="/assets/check.svg" alt="" />
+                <img src="/img/educonnect/check.svg" alt="" />
                 <h3 className="text-base text-gray-400">Mentor</h3>
               </div>
               <div className="flex flex-row gap-2 items-center">
-                <img src="/assets/check.svg" alt="" />
+                <img src="/img/educonnect/check.svg" alt="" />
                 <h3 className="text-base text-gray-400">Pencarian Peluang</h3>
               </div>
             </div>
@@ -137,42 +137,42 @@ const Educonnect = () => {
         <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-10 mt-8 text-center">
           {[
             {
-              img: "/assets/minat.svg",
+              img: "/img/educonnect/minat.svg",
               title: "Minat",
               desc: "Grup Berdasarkan Minat",
             },
             {
-              img: "/assets/komunitas.svg",
+              img: "/img/educonnect/komunitas.svg",
               title: "Komunitas",
               desc: "Belajar bareng teman satu tujuan",
             },
             {
-              img: "/assets/mentor.svg",
+              img: "/img/educonnect/mentor.svg",
               title: "Mentor",
               desc: "Dipandu oleh alumni dan profesional",
             },
             {
-              img: "/assets/topik.svg",
+              img: "/img/educonnect/topik.svg",
               title: "Topik",
               desc: "Diskusi terstruktur sesuai kebutuhan",
             },
             {
-              img: "/assets/terjadwal.svg",
+              img: "/img/educonnect/terjadwal.svg",
               title: "Terjadwal",
               desc: "Diskusi mingguan atau sesi khusus",
             },
             {
-              img: "/assets/notifikasi.svg",
+              img: "/img/educonnect/notifikasi.svg",
               title: "Notifikasi",
               desc: "Update langsung ke pengguna",
             },
             {
-              img: "/assets/fleksibel.svg",
+              img: "/img/educonnect/fleksibel.svg",
               title: "Fleksibel",
               desc: "Akses mudah dari mana saja",
             },
             {
-              img: "/assets/tujuan.svg",
+              img: "/img/educonnect/tujuan.svg",
               title: "Tujuan",
               desc: "Capai hasil nyata bersama grup belajar terarah.",
             },
@@ -216,7 +216,7 @@ const Educonnect = () => {
                     className="flex flex-col w-full md:flex-shrink-0 md:w-[23rem]"
                   >
                     <img
-                      src={`/assets/mentor${i + 1}.png`} // Pastikan gambar sesuai nama/urutan
+                      src={`/img/educonnect/mentor${i + 1}.png`} // Pastikan gambar sesuai nama/urutan
                       alt={`Mentor ${i + 1}`}
                       className="rounded-[2rem] w-full object-cover shadow-md"
                     />
@@ -234,7 +234,7 @@ const Educonnect = () => {
         </div>
 
         <a
-          href="/mentor"
+          href="/mentoring"
           className="mt-12 bg-blue-500 hover:bg-blue-600 px-10 text-center py-3 md:py-2 text-base rounded-lg font-bold text-white w-fit"
         >
           Gabung dengan Mentor
