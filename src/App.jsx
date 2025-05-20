@@ -6,8 +6,16 @@ import ProfilePage from "./pages/ProfilePage";
 
 import ScholarshipHub from "./pages/ScholarshipHub/ScholarshipHub";
 import Rekomendasi from "./pages/ScholarshipHub/Rekomendasi";
-import EduprepTools from "./pages/EduprepTools/EduprepTools";
 
+import EduriseAcademy from "./pages/Eduacademy/Eduacademy";
+import Webinar from "./pages/Eduacademy/Webinar";
+import Klikforum from "./pages/Eduacademy/KlikForum";
+import ForumDiskusi from "./pages/Eduacademy/ForumDiskusi";
+import WebinarDetail from "./pages/Eduacademy/WebinarDetail";
+import Artikel from "./pages/Eduacademy/Artikel";
+import ArtikelBeasiswa from "./pages/Eduacademy/ArtikelBeasiswa";
+
+import EduprepTools from "./pages/EduprepTools/EduprepTools";
 import PratinjauCV from "./pages/EduprepTools/PratinjauCV";
 import TemplateCV from "./pages/EduprepTools/TemplateCV";
 import PratinjauMotivation from "./pages/EduprepTools/PratinjauMotlet";
@@ -42,8 +50,16 @@ function App() {
 
         <Route path="/scholarshiphub/rekomendasi" element={<Rekomendasi />} />
 
-        {/* Halaman Eduprep Tools */}
+        {/* Halaman Edurise Academy */}
+        <Route path="/eduriseacademy" element={<EduriseAcademy />} />
+        <Route path="/webinar" element={<Webinar />} />
+        <Route path="/webinardetail" element={<WebinarDetail />} />
+        <Route path="/artikel" element={<Artikel />} />
+        <Route path="/artikelbeasiswa" element={<ArtikelBeasiswa />} />
+        <Route path="/forumdiskusi" element={<ForumDiskusi />} />
+        <Route path="/klikforum" element={<Klikforum />} />
 
+        {/* Halaman Eduprep Tools */}
         <Route path="/eduprep-tools" element={<EduprepTools />} />
 
         <Route path="/eduprep-tools/pratinjau-cv" element={<PratinjauCV />} />

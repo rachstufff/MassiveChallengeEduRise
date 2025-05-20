@@ -17,9 +17,8 @@ const Navbar = () => {
       {/* Halaman Eduprep Tools */}
       <Link to="/eduprep-tools">Eduprep Tools</Link>
 
-      {/* Halaman lain */}
-
-      <a href="#">Edurise Academy</a>
+      {/* Halaman Edurise Academy*/}
+      <Link to="/eduriseacademy">Edurise Academy</Link>
 
       {/* Halaman Edu Event */}
       <Link to="/eduevent">Edu Event</Link>
