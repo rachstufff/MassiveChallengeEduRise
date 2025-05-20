@@ -20,7 +20,9 @@ const Navbar = () => {
       {/* Halaman lain */}
 
       <a href="#">Edurise Academy</a>
-      <a href="#">Edu Events</a>
+
+      {/* Halaman Edu Event */}
+      <Link to="/eduevent">Edu Event</Link>
 
       {/* Halaman Edu Connect */}
       <Link to="/educonnect">Educonnect</Link>

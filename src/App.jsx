@@ -23,6 +23,8 @@ import Diskusi from "./pages/Educonnect/Diskusi";
 import Mentoring from "./pages/Educonnect/Mentoring";
 import Forum from "./pages/Educonnect/Forum";
 
+import Eduevent from "./pages/Eduevent/Eduevent";
+
 function App() {
   return (
     <BrowserRouter>
@@ -75,6 +77,11 @@ function App() {
         <Route path="/forum" element={<Forum />} />
 
         <Route path="/mentoring" element={<Mentoring />} />
+
+        {/* Eduevent */}
+        <Route path="/eduevent" element={<Eduevent />} />
+
+        {/* Halaman lain */}
       </Routes>
 
       <Footer />
