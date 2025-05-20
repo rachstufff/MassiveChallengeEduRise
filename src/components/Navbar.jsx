@@ -14,8 +14,11 @@ const Navbar = () => {
       {/* Halaman utama Scholarship Hub */}
       <Link to="/scholarshiphub">Scholarship Hub</Link>
 
+      {/* Halaman Eduprep Tools */}
+      <Link to="/eduprep-tools">Eduprep Tools</Link>
+
       {/* Halaman lain */}
-      <a href="#">EduPrep Tools</a>
+
       <a href="#">Edurise Academy</a>
       <a href="#">Edu Events</a>
       <a href="#">Edu Connect</a>

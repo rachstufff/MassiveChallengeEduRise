@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Card from "../components/scholarshiphub/Card";
-import PopupDetail from "../components/scholarshiphub/PopupDetail";
-import PopupFilter from "../components/scholarshiphub/PopupFilter";
-import PopupSaved from "../components/scholarshiphub/PopupSaved";
-import cards from "../data/cards";
+import Card from "../../components/scholarshiphub/Card";
+import PopupDetail from "../../components/scholarshiphub/PopupDetail";
+import PopupFilter from "../../components/scholarshiphub/PopupFilter";
+import PopupSaved from "../../components/scholarshiphub/PopupSaved";
+import cards from "../../data/cards";
 
 const ScholarshipHub = () => {
   const [filter, setFilter] = useState({
