@@ -2,6 +2,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
+import LandingBefore from "./pages/LandingBefore";
+import LandingAfter from "./pages/LandingAfter";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import ResetPage from "./pages/ResetPage";
+import AdminLogin from "./pages/admin/AdminLogin";
+import AdminHome from "./pages/admin/AdminHome";
+import ArtikelAdmin from "./pages/admin/ArtikelAdmin";
 import ProfilePage from "./pages/ProfilePage";
 
 import ScholarshipHub from "./pages/ScholarshipHub/ScholarshipHub";
@@ -39,15 +47,23 @@ function App() {
       <Navbar />
 
       <Routes>
-        {/* Halaman utama */}
-        <Route path="/" element={<h1>Home</h1>} />
+        {/* Admin Routes */}
+        <Route path="/loginadmin" element={<AdminLogin />} />
+        <Route path="/adminhome" element={<AdminHome />} />
+        <Route path="/artikeladmin" element={<ArtikelAdmin />} />
+
+        {/* Public Routes */}
+        <Route path="/" element={<LandingBefore />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/registerpage" element={<RegisterPage />} />
+        <Route path="/resetpage" element={<ResetPage />} />
 
         {/* Halaman Profile */}
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/landingpage" element={<LandingAfter />} />
 
         {/* Halaman Scholarship Hub */}
         <Route path="/scholarshiphub" element={<ScholarshipHub />} />
-
         <Route path="/scholarshiphub/rekomendasi" element={<Rekomendasi />} />
 
         {/* Halaman Edurise Academy */}
@@ -61,11 +77,8 @@ function App() {
 
         {/* Halaman Eduprep Tools */}
         <Route path="/eduprep-tools" element={<EduprepTools />} />
-
         <Route path="/eduprep-tools/pratinjau-cv" element={<PratinjauCV />} />
-
         <Route path="/eduprep-tools/template-cv" element={<TemplateCV />} />
-
         <Route
           path="/eduprep-tools/pratinjau-motlet"
           element={<PratinjauMotivation />}
@@ -74,24 +87,16 @@ function App() {
           path="/eduprep-tools/template-motlet"
           element={<TemplateMotivation />}
         />
-
         <Route path="/submit-essay" element={<SubmitEssay />} />
-
         <Route path="/submit-essay/tunggu-hasil" element={<TungguHasil />} />
-
         <Route path="/lihat-hasil" element={<LihatHasil />} />
-
         <Route path="/hasil-feedback" element={<HasilFeedback />} />
-
         <Route path="/simulasi-wawancara" element={<SimulasiWawancara />} />
 
         {/* Halaman Educonnect */}
         <Route path="/educonnect" element={<Educonnect />} />
-
         <Route path="/diskusi" element={<Diskusi />} />
-
         <Route path="/forum" element={<Forum />} />
-
         <Route path="/mentoring" element={<Mentoring />} />
 
         {/* Eduevent */}

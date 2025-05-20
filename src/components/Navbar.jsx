@@ -9,7 +9,7 @@ const Navbar = () => {
       <img src={logo} alt="Logo" />
 
       {/* Home */}
-      <Link to="/">Home</Link>
+      <Link to="/landingpage">Home</Link>
 
       {/* Halaman utama Scholarship Hub */}
       <Link to="/scholarshiphub">Scholarship Hub</Link>
