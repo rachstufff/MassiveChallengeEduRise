@@ -442,7 +442,6 @@ const LandingBefore = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };
