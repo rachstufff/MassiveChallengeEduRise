@@ -3,6 +3,8 @@ import "./stylepages.css";
 import HeaderBefore from "../components/HeaderBefore";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const LandingBefore = () => {
   return (
