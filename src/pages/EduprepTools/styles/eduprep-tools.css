@@ -1,0 +1,164 @@
+.hero {
+  background: linear-gradient(to left, #265899, #0d1d33);
+  padding: 60px 0;
+  color: #feffff;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.hero-text h1 {
+  font-size: 49px;
+  margin-bottom: 15px;
+  color: #dda853;
+}
+
+.hero-text p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: auto;
+}
+
+/* Features Section */
+.features {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 31px;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  color: #3375cc;
+  font-weight: bold;
+}
+
+.section-title span {
+  color: #dda853;
+}
+
+.feature-desc {
+  font-size: 16px;
+  color: #575858;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.feature-card {
+  background: #feffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px 40px;
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.document {
+  text-align: center;
+  width: 100%;
+}
+
+.feature-card .btn {
+  margin-top: auto;
+}
+
+.feature-card img {
+  width: 64px;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #575858;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #575858;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #3375cc;
+  color: white;
+  padding: 10px 60px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #0286e6;
+}
+
+/* Essay Section */
+.essay-section {
+  padding: 60px 0;
+  text-align: center;
+  background-color: #feffff;
+}
+
+/* Interview Section */
+.interview-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.interview-simulator {
+  background: #fefefe;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.interview-simulator h3 {
+  font-size: 18px;
+  color: #575858;
+  margin-bottom: 100px;
+}
+
+.interview-simulator p {
+  font-size: 14px;
+  color: #575858;
+  line-height: 1, 5;
+  margin-bottom: 100px;
+}

@@ -195,7 +195,7 @@ const AdminHome = () => {
           <LayoutDashboard className="lucide me-2" />
           Dashboard
         </Link>
-        <Link to="/artikel-admin" className="nav-link">
+        <Link to="/artikeladmin" className="nav-link">
           <BarChart3 className="lucide me-2" />
           Artikel
         </Link>
@@ -412,7 +412,7 @@ const AdminHome = () => {
           <div className="card">
             <div className="card-header d-flex justify-content-between align-items-center">
               <strong>Kelola Artikel</strong>
-              <Link to="/artikel-admin" className="btn btn-sm btn-primary">
+              <Link to="/artikeladmin" className="btn btn-sm btn-primary">
                 <Plus size={16} className="me-1" />
                 Tambah Artikel
               </Link>
@@ -443,7 +443,7 @@ const AdminHome = () => {
                         </td>
                         <td>
                           <Link
-                            to={`/artikel-admin?id=${article.id}`}
+                            to={`/artikeladmin?id=${article.id}`}
                             className="btn btn-sm btn-primary me-1"
                           >
                             <Edit size={16} />

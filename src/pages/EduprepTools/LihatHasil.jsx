@@ -1,3 +1,4 @@
+import "../EduprepTools/styles/lihat-hasil.css";
 import { Link } from "react-router-dom";
 function LihatHasil() {
   return (

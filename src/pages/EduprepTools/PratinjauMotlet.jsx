@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../EduprepTools/styles/pratinjau-motivation.css";
 const PratinjauMotivation = () => {
   return (
     <>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../EduprepTools/styles/template-cv.css";
 const TemplateCv = () => {
   return (
     <div className="main-content">

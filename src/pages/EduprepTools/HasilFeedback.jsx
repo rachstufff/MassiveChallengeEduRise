@@ -1,3 +1,4 @@
+import "../EduprepTools/styles/hasil-feedback.css";
 function HasilFeedback() {
   return (
     <main>

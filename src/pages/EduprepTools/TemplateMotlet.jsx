@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../EduprepTools/styles/template-motivation.css";
 const TemplateMotivation = () => {
   return (
     <div className="main-content">

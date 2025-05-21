@@ -1,0 +1,132 @@
+.hero {
+    background: linear-gradient(to left, #265899, #0d1d33);
+    color: white;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 36px;
+    margin-bottom: 8px;
+    color: #dda853;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    opacity: 0.9;
+    color: #feffff
+}
+
+.hero-image {
+    width: 240px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Main Content */
+.content-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 31px;
+    color:#3375cc
+}
+
+.section-title span {
+    color: #dda853;
+}
+
+/* Score Summary */
+.score-summary {
+    background-color: #feffff;
+    border-radius: 10px;
+    border: 1px solid #dda853;
+    padding: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.score-label {
+    color: #575858;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.score-value {
+    font-size: 24px;
+    color: #575858;
+}
+
+/* Score Details */
+.score-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 80px;
+}
+
+.score-card {
+    background-color: #feffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #dda853;
+    display: flex;
+    align-items: flex-start;
+}
+
+.score-card img {
+    width: 40px;
+    height: 40px;
+}
+
+.score-card-full {
+    grid-column: span 2;
+}
+
+.score-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 16px;
+    flex-shrink: 0;
+    border: 1px solid #3375cc;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-content h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #575858;
+    font-weight: bold;
+}
+
+.score-content p {
+    font-size: 16px;
+    color: #575858;
+    margin-bottom: 10px;
+}
+
+.score-badge {
+    display: inline-block;
+    background-color: #dda853;
+    color: #feffff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}

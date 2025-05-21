@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../EduprepTools/styles/submit-essay.css";
 function SubmitEssay() {
   return (
     <main className="main-content">

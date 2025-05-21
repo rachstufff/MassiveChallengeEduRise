@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../EduprepTools/styles/eduprep-tools.css";
 const EduprepTools = () => {
   return (
     <>

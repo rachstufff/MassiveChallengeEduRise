@@ -1,0 +1,44 @@
+.main-section {
+  text-align: center;
+  padding: 150px 16px;
+}
+
+.check-image {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 30px;
+  object-fit: contain;
+}
+
+.main-section h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.blue-text {
+  color: #3375cc;
+}
+
+.gold-text {
+  color: #dda853;
+}
+
+.main-section p {
+  color: #575858;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  background: #3375cc;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #0286e6;
+}

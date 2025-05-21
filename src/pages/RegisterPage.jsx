@@ -171,11 +171,7 @@ const RegisterPage = () => {
                           />
                         </span>
                       </div>
-                      <div className="d-flex justify-content-end mt-2">
-                        <Link to="/resetpage" className="forgot-password">
-                          Forgot Password?
-                        </Link>
-                      </div>
+                      <div className="d-flex justify-content-end mt-2"></div>
                     </div>
                     <div className="d-grid gap-2 mt-4">
                       <button

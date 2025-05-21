@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../EduprepTools/styles/tunggu-hasil.css";
 function TungguHasil() {
   return (
     <main className="main-section">

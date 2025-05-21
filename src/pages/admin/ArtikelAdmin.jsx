@@ -77,7 +77,7 @@ const ArtikelAdmin = () => {
     console.log("Article data to save:", articleData);
 
     // Navigate back to admin dashboard
-    navigate("/dashadmin");
+    navigate("/adminhome");
   };
 
   return (
@@ -100,7 +100,7 @@ const ArtikelAdmin = () => {
       {/* Sidebar navigation */}
       <nav className="admin-sidebar">
         <h5 className="sidebar-title">Menu</h5>
-        <Link to="/dashadmin" className="nav-link">
+        <Link to="/adminhome" className="nav-link">
           <LayoutDashboard className="lucide me-2" />
           Dashboard
         </Link>
@@ -126,7 +126,7 @@ const ArtikelAdmin = () => {
             <h4 className="mb-0">
               {isEditMode ? "Edit Artikel" : "Tulis Artikel Baru"}
             </h4>
-            <Link to="/dashadmin" className="btn btn-outline-secondary">
+            <Link to="/adminhome" className="btn btn-outline-secondary">
               <ArrowLeft size={16} className="me-1" /> Kembali
             </Link>
           </div>

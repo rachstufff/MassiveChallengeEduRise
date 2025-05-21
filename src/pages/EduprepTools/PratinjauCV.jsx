@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../EduprepTools/styles/pratinjau-cv.css";
 const PratinjauCv = () => {
   return (
     <>

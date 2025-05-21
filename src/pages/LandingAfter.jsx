@@ -1,5 +1,5 @@
-import "./stylepages.css";
 import { Link } from "react-router-dom";
+import "./stylepages.css";
 
 const LandingAfter = () => {
   return (
@@ -211,7 +211,7 @@ const LandingAfter = () => {
                       Review progres pendaftaran beasiswamu bersama mentor
                       professional dibidangnya
                     </p>
-                    <a href="#" className="program-link">
+                    <a href="/mentoring" className="program-link">
                       <span>Mulai</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -246,7 +246,7 @@ const LandingAfter = () => {
                       Pelajari edukasi dan tips seputar beasiswa, memperbesar
                       peluangmu diterima beasiswa
                     </p>
-                    <a href="#" className="program-link">
+                    <a href="/artikelbeasiswa" className="program-link">
                       <span>Mulai</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -283,7 +283,7 @@ const LandingAfter = () => {
                       Kami berusaha untuk selalu memberikan informasi beasiswa
                       terupdate dari sumber faktual
                     </p>
-                    <a href="#" className="program-link">
+                    <a href="/scholarshiphub" className="program-link">
                       <span>Mulai</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
