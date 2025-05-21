@@ -248,8 +248,8 @@ main {
 .content {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 24px;
-  max-width: 1400px;
+  gap: 36px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 16px;
   align-items: stretch;
@@ -259,7 +259,7 @@ main {
   background-color: #ebf1fa;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
+  max-width: 360px;
   height: 580px;
   display: flex;
   flex-direction: column;
