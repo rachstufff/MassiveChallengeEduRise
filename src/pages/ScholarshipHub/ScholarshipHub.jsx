@@ -13,7 +13,6 @@ const ScholarshipHub = () => {
     lokasi: "",
     deadline: "",
   });
-
   const [popupOpen, setPopupOpen] = useState(false);
   const [showFilterPopup, setShowFilterPopup] = useState(false);
   const [selectedCard, setSelectedCard] = useState(null);
@@ -27,65 +26,50 @@ const ScholarshipHub = () => {
     setSaved(false);
   };
 
-  const handleSave = () => {
-    setSaved(true);
-  };
-
   const filteredData = cards.filter((item) => {
-    const matchKategori = filter.kategori
-      ? item.kategori === filter.kategori
-      : true;
-    const matchJenjang = filter.jenjang
-      ? item.jenjang === filter.jenjang
-      : true;
-    const matchLokasi = filter.lokasi ? item.lokasi === filter.lokasi : true;
-    const matchDeadline = filter.deadline
-      ? item.deadline === filter.deadline
-      : true;
-    return matchKategori && matchJenjang && matchLokasi && matchDeadline;
+    return (
+      (!filter.kategori || item.kategori === filter.kategori) &&
+      (!filter.jenjang || item.jenjang === filter.jenjang) &&
+      (!filter.lokasi || item.lokasi === filter.lokasi) &&
+      (!filter.deadline || item.deadline === filter.deadline)
+    );
   });
 
   return (
-    <main>
-      {/* Banner Header */}
-      <section className="banner">
-        <img src="/img/scholarshiphub/MainBanner.png" alt="Banner Beasiswa" />
+    <main className="px-6 py-10">
+      {/* Banner */}
+      <section className="mb-10">
+        <img
+          src="/img/scholarshiphub/MainBanner.png"
+          alt="Banner Beasiswa"
+          className="w-full object-cover"
+        />
       </section>
 
       {/* Daftar Beasiswa */}
-      <section className="content" style={{ marginTop: "48px" }}>
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-screen-xl mx-auto">
         {filteredData.length > 0 ? (
           filteredData.map((item, index) => (
-            <Card
-              key={index}
-              img={item.img}
-              title={item.title}
-              description={item.summary}
-              detail={item.detail}
-              jenjang={item.jenjang}
-              lokasi={item.lokasi}
-              deadline={item.deadline}
-              onClick={handleCardClick}
-            />
+            <Card key={index} {...item} onClick={handleCardClick} />
           ))
         ) : (
-          <p style={{ textAlign: "center", gridColumn: "1/-1" }}>
+          <p className="col-span-full text-center text-gray-500">
             Tidak ada beasiswa yang cocok dengan filter.
           </p>
         )}
       </section>
 
-      {/* CTA Rekomendasi */}
-      <section className="recommended">
-        <div className="recommended-title">
-          <h1>Kamu Masih Bingung?</h1>
-        </div>
-        <button className="btn" onClick={() => setShowFilterPopup(true)}>
+      {/* Rekomendasi CTA */}
+      <section className="text-center mt-12">
+        <h1 className="text-2xl font-bold mb-4">Kamu Masih Bingung?</h1>
+        <button
+          className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 font-semibold"
+          onClick={() => setShowFilterPopup(true)}
+        >
           Cari Rekomendasi
         </button>
       </section>
 
-      {/* Popup Detail */}
       <PopupDetail
         show={popupOpen}
         onClose={() => setPopupOpen(false)}
@@ -97,10 +81,8 @@ const ScholarshipHub = () => {
         }}
       />
 
-      {/* Popup Tersimpan */}
       <PopupSaved show={saved} onClose={() => setSaved(false)} />
 
-      {/* Popup Filter → langsung navigasi ke halaman rekomendasi */}
       <PopupFilter
         show={showFilterPopup}
         onClose={() => setShowFilterPopup(false)}

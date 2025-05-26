@@ -19,11 +19,6 @@ const Rekomendasi = () => {
   const [popupOpen, setPopupOpen] = useState(false);
   const [saved, setSaved] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFilters({ ...filters, [name]: value });
-  };
-
   const handleCardClick = (card) => {
     setSelectedCard(card);
     setPopupOpen(true);
@@ -43,7 +38,6 @@ const Rekomendasi = () => {
     );
   });
 
-  // Auto-close popup tersimpan
   useEffect(() => {
     if (saved) {
       const timer = setTimeout(() => setSaved(false), 3000);
@@ -52,43 +46,36 @@ const Rekomendasi = () => {
   }, [saved]);
 
   return (
-    <main>
-      {/* Banner Header */}
-      <section className="banner">
-        <img src="/img/scholarshiphub/Banner.png" alt="Banner Beasiswa" />
+    <main className="px-6 py-10">
+      <section className="mb-6">
+        <img
+          src="/img/scholarshiphub/Banner.png"
+          alt="Banner Beasiswa"
+          className="w-full object-cover"
+        />
       </section>
 
-      {/* Tombol kembali */}
-      <section className="back-btn">
-        <a href="/scholarshiphub" className="back-button">
+      <section className="mb-6">
+        <a
+          href="/scholarshiphub"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm font-semibold"
+        >
           <i className="fa-solid fa-arrow-left"></i> Kembali
         </a>
       </section>
 
-      {/* Hasil Rekomendasi */}
-      <section className="content" style={{ marginTop: "40px" }}>
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-screen-xl mx-auto">
         {filteredCards.length > 0 ? (
           filteredCards.map((item, i) => (
-            <Card
-              key={i}
-              img={item.img}
-              title={item.title}
-              description={item.summary}
-              detail={item.detail}
-              jenjang={item.jenjang}
-              lokasi={item.lokasi}
-              deadline={item.deadline}
-              onClick={handleCardClick}
-            />
+            <Card key={i} {...item} onClick={handleCardClick} />
           ))
         ) : (
-          <p style={{ textAlign: "center", gridColumn: "1/-1" }}>
+          <p className="col-span-full text-center text-gray-500">
             Tidak ada program yang sesuai dengan filter.
           </p>
         )}
       </section>
 
-      {/* Popup Detail */}
       <PopupDetail
         show={popupOpen}
         onClose={() => setPopupOpen(false)}
@@ -96,8 +83,6 @@ const Rekomendasi = () => {
         saved={false}
         onSave={handleSave}
       />
-
-      {/* Popup Tersimpan */}
       <PopupSaved show={saved} onClose={() => setSaved(false)} />
     </main>
   );
