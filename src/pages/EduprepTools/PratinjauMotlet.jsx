@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import "../EduprepTools/styles/pratinjau-motivation.css";
+import Header from "../../components/Navbar";
+import Footer from "../../components/Footer";
 const PratinjauMotivation = () => {
   return (
     <>
+      <Header />
       <section className="hero">
         <div className="hero-container">
           <div className="hero-content">
@@ -46,6 +49,7 @@ const PratinjauMotivation = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

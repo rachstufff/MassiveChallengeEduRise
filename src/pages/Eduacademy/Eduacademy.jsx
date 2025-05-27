@@ -1,10 +1,13 @@
 import card2 from "/img/eduacademy/eab53ecb-a930-4105-a027-e728222f8a29.jpg";
 import card3 from "/img/eduacademy/Link-Daftar-Beasiswa-LPDP-2025-Jadwal-Syarat-Pendaftaran.jpg";
 import hero from "/img/eduacademy/Rectangle 5.png";
+import Header from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 function Eduacademy() {
   return (
     <>
+      <Header />
       <>
         {/* Hero Section */}
         <section className="px-6 py-20 bg-gradient-to-br from-blue-50 to-white min-h-screen flex items-center">
@@ -292,6 +295,7 @@ function Eduacademy() {
           </a>
         </section>
       </>
+      <Footer />
     </>
   );
 }

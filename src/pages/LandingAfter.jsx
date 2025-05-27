@@ -1,11 +1,12 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
-import HeaderBefore from "../components/HeaderBefore";
+import Header from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const LandingBefore = () => {
   return (
     <>
-      {/* <HeaderBefore /> */}
+      <Header />
       <main>
         {/* Hero Section */}
         <section className="bg-[#F9FAFB] overflow-hidden">
@@ -460,6 +461,7 @@ const LandingBefore = () => {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 };

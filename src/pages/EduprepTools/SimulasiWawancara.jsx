@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import "../EduprepTools/styles/simulasi-wawancara.css";
+import Header from "../../components/Navbar";
+import Footer from "../../components/Footer";
 const SimulasiWawancara = () => {
   return (
     <>
+      <Header />
       {/* Hero Section */}
       <section className="hero">
         <div className="container">
@@ -79,6 +82,7 @@ const SimulasiWawancara = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

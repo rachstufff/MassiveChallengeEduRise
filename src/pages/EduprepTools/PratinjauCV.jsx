@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import "../EduprepTools/styles/pratinjau-cv.css";
+import Header from "../../components/Navbar";
+import Footer from "../../components/Footer";
 const PratinjauCv = () => {
   return (
     <>
+      <Header />
       <section className="hero">
         <div className="hero-container">
           <div className="hero-image">
@@ -46,6 +49,7 @@ const PratinjauCv = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

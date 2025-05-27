@@ -4,6 +4,8 @@ import posterWeb from "/img/eduacademy/posterweb.png";
 import profile from "/img/eduacademy/profile.png";
 import rekaman from "/img/eduacademy/nah.mp4";
 import sertif from "/img/eduacademy/sertip.png";
+import Header from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 function WebinarDetail() {
   const [activeTab, setActiveTab] = useState("#Desc");
@@ -114,6 +116,7 @@ function WebinarDetail() {
 
   return (
     <>
+      <Header />
       <div className="bg-white text-gray-800">
         {/* Hero Section */}
         <section
@@ -909,6 +912,7 @@ function WebinarDetail() {
           </div>
         )}
       </div>
+      <Footer />
     </>
   );
 }

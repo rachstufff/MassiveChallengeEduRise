@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import Header from "../../components/Navbar";
+import Footer from "../../components/Footer";
 import Card from "../../components/scholarshiphub/Card";
 import PopupDetail from "../../components/scholarshiphub/PopupDetail";
 import PopupSaved from "../../components/scholarshiphub/PopupSaved";
@@ -46,45 +48,49 @@ const Rekomendasi = () => {
   }, [saved]);
 
   return (
-    <main className="px-6 py-10">
-      <section className="mb-6">
-        <img
-          src="/img/scholarshiphub/Banner.png"
-          alt="Banner Beasiswa"
-          className="w-full object-cover"
+    <>
+      <Header />
+      <main className="px-6 py-10">
+        <section className="mb-6">
+          <img
+            src="/img/scholarshiphub/Banner.png"
+            alt="Banner Beasiswa"
+            className="w-full object-cover"
+          />
+        </section>
+
+        <section className="mb-6">
+          <a
+            href="/scholarshiphub"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm font-semibold"
+          >
+            <i className="fa-solid fa-arrow-left"></i> Kembali
+          </a>
+        </section>
+
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-screen-xl mx-auto">
+          {filteredCards.length > 0 ? (
+            filteredCards.map((item, i) => (
+              <Card key={i} {...item} onClick={handleCardClick} />
+            ))
+          ) : (
+            <p className="col-span-full text-center text-gray-500">
+              Tidak ada program yang sesuai dengan filter.
+            </p>
+          )}
+        </section>
+
+        <PopupDetail
+          show={popupOpen}
+          onClose={() => setPopupOpen(false)}
+          data={selectedCard}
+          saved={false}
+          onSave={handleSave}
         />
-      </section>
-
-      <section className="mb-6">
-        <a
-          href="/scholarshiphub"
-          className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm font-semibold"
-        >
-          <i className="fa-solid fa-arrow-left"></i> Kembali
-        </a>
-      </section>
-
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-screen-xl mx-auto">
-        {filteredCards.length > 0 ? (
-          filteredCards.map((item, i) => (
-            <Card key={i} {...item} onClick={handleCardClick} />
-          ))
-        ) : (
-          <p className="col-span-full text-center text-gray-500">
-            Tidak ada program yang sesuai dengan filter.
-          </p>
-        )}
-      </section>
-
-      <PopupDetail
-        show={popupOpen}
-        onClose={() => setPopupOpen(false)}
-        data={selectedCard}
-        saved={false}
-        onSave={handleSave}
-      />
-      <PopupSaved show={saved} onClose={() => setSaved(false)} />
-    </main>
+        <PopupSaved show={saved} onClose={() => setSaved(false)} />
+      </main>
+      <Footer />
+    </>
   );
 };
 

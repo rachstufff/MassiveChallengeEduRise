@@ -4,10 +4,13 @@ import artikel3 from "/img/eduacademy/bisanugas-59.jpg.webp";
 import artikel4 from "/img/eduacademy/artikel4.jpg";
 import artikel5 from "/img/eduacademy/images.jpeg";
 import artikel6 from "/img/eduacademy/5-syarat-umum-yang-harus-dikuasai-pencari-beasiswa_uiiKRqIel6.jpeg";
+import Header from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 function Artikelbeasiswa() {
   return (
     <>
+      <Header />
       <>
         {/* Header */}
         <header className="bg-white shadow">
@@ -213,6 +216,7 @@ function Artikelbeasiswa() {
           </div>
         </section>
       </>
+      <Footer />
     </>
   );
 }

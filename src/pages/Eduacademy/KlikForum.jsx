@@ -1,6 +1,9 @@
+import Header from "../../components/Navbar";
+import Footer from "../../components/Footer";
 function Klikforum() {
   return (
     <>
+      <Header />
       <>
         {/* Header */}
         <header className="bg-white shadow">
@@ -73,6 +76,7 @@ function Klikforum() {
           </section>
         </main>
       </>
+      <Footer />
     </>
   );
 }

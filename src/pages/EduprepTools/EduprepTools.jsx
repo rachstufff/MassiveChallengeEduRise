@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import "../EduprepTools/styles/eduprep-tools.css";
+import Header from "../../components/Navbar";
+import Footer from "../../components/Footer";
 const EduprepTools = () => {
   return (
     <>
+      <Header />
       {/* Hero Section */}
       <section className="hero">
         <div className="container hero-content">
@@ -112,6 +115,7 @@ const EduprepTools = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

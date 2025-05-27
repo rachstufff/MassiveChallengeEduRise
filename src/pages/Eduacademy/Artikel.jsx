@@ -1,8 +1,11 @@
 import HeroArtikel from "/img/eduacademy/img.png";
+import Header from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 function Artikel() {
   return (
     <>
+      <Header />
       <>
         {/* Hero Section */}
         <section
@@ -191,6 +194,7 @@ function Artikel() {
           </div>
         </section>
       </>
+      <Footer />
     </>
   );
 }

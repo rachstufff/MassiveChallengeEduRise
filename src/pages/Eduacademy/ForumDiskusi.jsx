@@ -1,8 +1,11 @@
 import Hero from "/img/eduacademy/Diskusi-Panel-7-removebg-preview.png";
+import Header from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 function Forumdiskusi() {
   return (
     <>
+      <Header />
       <>
         {/* Hero Section */}
         <section className="relative bg-gradient-to-r from-[#265899] to-[#0D1D33] text-white min-h-screen flex items-center overflow-hidden">
@@ -186,6 +189,7 @@ function Forumdiskusi() {
         </section>
       </>
       )
+      <Footer />
     </>
   );
 }
