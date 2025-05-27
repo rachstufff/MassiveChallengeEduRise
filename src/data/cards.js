@@ -3,7 +3,7 @@ const cards = [
   {
     img: "/img/scholarshiphub/img5.jpg",
     title: "Beasiswa Unggulan Kemendikbud",
-    summary:
+    description:
       "Beasiswa prestisius dari Kementerian Pendidikan dan Kebudayaan untuk putra-putri terbaik bangsa. Menawarkan pembiayaan penuh bagi mahasiswa S1 hingga S3 yang memiliki prestasi akademik maupun non-akademik.",
     detail: `Program beasiswa dari Kemendikbudristek untuk mahasiswa S1 dan S2 di perguruan tinggi dalam negeri.
 ✅ Syarat Utama
@@ -34,7 +34,7 @@ const cards = [
   {
     img: "/img/scholarshiphub/img2.jpg",
     title: "Beasiswa LPDP Reguler Dalam Negeri",
-    summary:
+    description:
       "Program beasiswa dari Kementerian Keuangan yang membiayai kuliah S2 atau S3 di universitas unggulan Indonesia. Dilengkapi dengan pembinaan kepemimpinan, pengembangan diri, dan jejaring nasional. Ideal untuk kamu yang ingin jadi agen perubahan Indonesia dari dalam negeri.",
     detail: `Beasiswa dari Kementerian Keuangan untuk studi S2 dan S3 di universitas top Indonesia.
 ✅ Syarat Utama
@@ -64,7 +64,7 @@ const cards = [
   {
     img: "/img/scholarshiphub/img9.jpg",
     title: "Beasiswa Djarum Plus",
-    summary:
+    description:
       "Lebih dari sekadar bantuan dana pendidikan! Beasiswa ini memberikan pelatihan soft skill eksklusif seperti public speaking, leadership, dan project management. Dibuka untuk mahasiswa S1 semester 4 dari seluruh perguruan tinggi di Indonesia.",
     detail: `Beasiswa pengembangan diri dan soft skill untuk mahasiswa S1 semester 4 yang aktif dan berprestasi.
                         ✅ Syarat Utama
@@ -92,7 +92,7 @@ const cards = [
   {
     img: "/img/scholarshiphub/img10.png",
     title: "Beasiswa Bank Indonesia",
-    summary:
+    description:
       "Program beasiswa yang tidak hanya mendanai biaya kuliah, juga membuka akses pelatihan, mentoring, dan jaringan kepemimpinan muda BI. Sangat cocok untuk mahasiswa yang ingin kontributif, dan punya cita-cita membangun negeri.",
     detail: `Diperuntukkan bagi mahasiswa S1 aktif yang berprestasi dan ingin menjadi agen perubahan di bidang ekonomi dan sosial.
 ✅ Syarat Utama
@@ -120,7 +120,7 @@ const cards = [
   {
     img: "/img/scholarshiphub/img3.jpg",
     title: "Beasiswa Sobat Bumi Pertamina Foundation",
-    summary:
+    description:
       "Beasiswa untuk mahasiswa S1 aktif di berbagai perguruan tinggi negeri dan swasta. Diperuntukkan bagi mahasiswa berprestasi dan peduli lingkungan, dengan dukungan dana pendidikan dan pelatihan kepemimpinan berkelanjutan.",
     detail: `Beasiswa hijau untuk mahasiswa yang aktif peduli lingkungan & memiliki semangat kepemimpinan.
 ✅ Syarat Utama
@@ -148,7 +148,7 @@ const cards = [
   {
     img: "/img/scholarshiphub/img1.jpg",
     title: "Pelatihan Data Analyst Google",
-    summary:
+    description:
       "Program pelatihan bersertifikat resmi dari Google untuk karier di bidang analisis data. Cocok untuk pemula, dengan pendekatan praktis dan studi kasus, serta tersedia bahasa Indonesia untuk memudahkan pemahaman.",
     detail: `Program pelatihan profesional bersertifikat dari Google untuk membangun karier sebagai analis data, cocok bagi pemula maupun profesional muda.
 ✅ Syarat Utama
@@ -178,7 +178,7 @@ const cards = [
   {
     img: "/img/scholarshiphub/img7.jpg",
     title: "Beasiswa Baznas Cendikia",
-    summary:
+    description:
       "Beasiswa khusus untuk mahasiswa dari keluarga kurang mampu yang memiliki semangat belajar tinggi. Selain pembiayaan, kamu akan tergabung dalam komunitas sosial Baznas dan dibekali karakter serta kepemimpinan Islami.",
     detail: `Beasiswa nasional dari Badan Amil Zakat Nasional untuk mahasiswa dari keluarga kurang mampu namun memiliki semangat belajar tinggi dan karakter Islami.
 ✅ Syarat Utama
@@ -206,7 +206,7 @@ const cards = [
   {
     img: "/img/scholarshiphub/img8.jpg",
     title: "Beasiswa Sahabat Guru",
-    summary:
+    description:
       "Beasiswa pendidikan dan pelatihan untuk calon guru dan pendidikan. Dirancang untuk mencetak tenaga pendidik muda kompeten, berdedikasi, dan siap berkontribusi bagi pendidikan Indonesia.",
     detail: `Program beasiswa dan pelatihan bagi calon pendidik dan mahasiswa jurusan pendidikan untuk meningkatkan kualitas pengajaran dan kompetensi profesional guru masa depan.
 ✅ Syarat Utama
@@ -235,7 +235,7 @@ const cards = [
   {
     img: "/img/scholarshiphub/img6.jpg",
     title: "Program Magang Kampus Merdeka",
-    summary:
+    description:
       "Program beasiswa yang tidak hanya mendanai biaya kuliah, juga membuka akses pelatihan, mentoring, dan jaringan kepemimpinan muda. Sangat cocok untuk mahasiswa yang ingin aktif, kontributif, dan punya cita-cita membangun negeri.",
     detail: `Program magang dari Kementerian Pendidikan yang memberi mahasiswa pengalaman kerja nyata di dunia industri, startup, BUMN, dan lembaga pemerintah.
 ✅ Syarat Utama
@@ -264,7 +264,7 @@ const cards = [
   {
     img: "/img/scholarshiphub/img4.jpg",
     title: "Pelatihan Soft Skill Prakerja",
-    summary:
+    description:
       "Tingkatkan kepercayaan diri, cara berkomunikasi, dan kepemimpinan melalui kelas interaktif. Cocok untuk mahasiswa atau fresh graduate yang ingin siap menghadapi dunia kerja.",
     detail: `Pelatihan keterampilan non-teknis dari Program Kartu Prakerja untuk meningkatkan kesiapan kerja bagi mahasiswa dan fresh graduate.
 ✅ Syarat Utama
