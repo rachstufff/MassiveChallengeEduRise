@@ -1,104 +1,112 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import "./stylepages.css";
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { Eye, EyeOff } from "lucide-react";
 
 const LoginPage = () => {
-  useEffect(() => {
-    document.body.classList.add("no-scroll-page");
+  const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
 
-    return () => {
-      document.body.classList.remove("no-scroll-page");
-    };
-  }, []);
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   return (
     <>
       <header>
-        <nav className="navbar navbar-expand-lg bg-white fixed-top navbar-shadow">
-          <div className="container navbar-container">
-            {/* Left side - Logo only */}
-            <Link className="navbar-brand" to="/">
-              <div className="navbar-logo-circle">
-                <img
-                  src="/img/eduriselanding/Ellipse 1.png"
-                  alt="EduRise Logo"
-                />
+        <nav className="bg-white shadow-md h-[100px] fixed top-0 left-0 right-0 z-50">
+          <div className="container mx-auto px-4 h-full flex items-center justify-between">
+            {/* Left side - Logo and Navigation Links */}
+            <div className="flex items-center">
+              <Link className="flex items-center" to="/">
+                <div className="w-[84px] h-[84px] rounded-full overflow-hidden flex items-center justify-center bg-white shadow-sm">
+                  <img
+                    src="/img/eduriselanding/Ellipse 1.png"
+                    alt="EduRise Logo"
+                    className="w-[70px] h-[70px] object-contain"
+                  />
+                </div>
+              </Link>
+
+              <div className="hidden lg:flex ml-8">
+                <ul className="flex space-x-6">
+                  {/* INI DIHUBUNGKAN KE landingBefore.jsx */}
+                  <li>
+                    <Link className="font-bold" to="/">
+                      HOME
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="font-bold text-[#3375CC] !text-[#3375CC] !underline underline"
+                      to="/login"
+                    >
+                      LOGIN PAGE
+                    </Link>
+                  </li>
+                </ul>
               </div>
-            </Link>
+            </div>
 
             <button
-              className="navbar-toggler"
+              className="lg:hidden p-2 rounded-md"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-
-            {/* Center - Navigation Links */}
-            <div
-              className="collapse navbar-collapse justify-content-start ms-5"
-              id="navbarNav"
-            >
-              <ul className="navbar-nav nav-auto-layout">
-                <li className="nav-item">
-                  <Link className="nav-link active fw-bold" to="/">
-                    HOME
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className="nav-link active fw-bold"
-                    href="#"
-                    style={{ color: "#3375CC" }}
-                  >
-                    <u>LOGIN PAGE</u>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Right side - Profile Button */}
-            <div className="profile-button-container">
-              <Link to="/loginadmin" className="profile-button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="34"
-                  height="34"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="lucide lucide-user"
-                >
-                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </Link>
-            </div>
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+
+            {/* Right side - Profile Button dengan background circle */}
+            {/* INI DIHUBUNGKAN KE loginAdmin.jsx */}
+            <Link
+              to="/loginadmin"
+              className="w-10 h-10 rounded-full bg-[#3375CC] text-white flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </Link>
           </div>
         </nav>
       </header>
 
       <main>
-        <section className="login-section no-scroll">
-          <div className="login-container no-scroll">
-            <div className="row g-0 h-100">
+        <section className="flex justify-center items-center min-h-[calc(100vh-76px)] px-5 mt-20 mb-20">
+          <div className="w-full max-w-[1130px] h-[720px] bg-white rounded-lg overflow-hidden shadow-md mx-auto">
+            <div className="flex flex-col md:flex-row h-full">
               {/* Login Form Section */}
-              <div className="col-md-6 login-form-section">
-                <div className="login-form-wrapper">
-                  <div className="text-center mb-4">
-                    <h2 className="welcome-title">
+              <div className="w-full md:w-1/2 flex items-start justify-center p-10 pt-20">
+                <div className="w-full max-w-[400px]">
+                  <div className="text-center mb-[85px]">
+                    <h2 className="text-2xl font-bold">
                       <span>WELCOME BACK TO </span>
-                      <span className="text-primary fst-italic">EDU</span>
-                      <span className="text-warning fst-italic">RISE</span>
+                      <span className="text-[#3375cc] italic">EDU</span>
+                      <span className="text-[#dda853] italic">RISE</span>
                     </h2>
-                    <p className="text-muted mb-5">
+                    <p className="text-gray-500 mb-5">
                       Lengkapi Data Login Anda Untuk Melanjutkan
                     </p>
                   </div>
@@ -107,18 +115,18 @@ const LoginPage = () => {
                     <div className="mb-4">
                       <label
                         htmlFor="username"
-                        className="form-label fw-bold mt-5"
+                        className="block font-bold mt-5 mb-2"
                       >
                         Username
                       </label>
-                      <div className="input-group">
+                      <div className="flex">
                         <input
                           type="text"
-                          className="form-control"
+                          className="w-full border border-gray-300 rounded-l-md p-2 focus:outline-none focus:ring-2 focus:ring-[#3375cc] focus:border-transparent"
                           id="username"
                           placeholder="Enter your username"
                         />
-                        <span className="input-group-text">
+                        <span className="bg-gray-100 border border-l-0 border-gray-300 rounded-r-md p-2 flex items-center">
                           <img
                             src="/img/eduriselanding/li_user.png"
                             alt="User Icon"
@@ -130,42 +138,61 @@ const LoginPage = () => {
                     </div>
 
                     <div className="mb-3">
-                      <label htmlFor="password" className="form-label fw-bold">
+                      <label
+                        htmlFor="password"
+                        className="block font-bold mb-2"
+                      >
                         Password
                       </label>
-                      <div className="input-group">
+                      <div className="flex">
                         <input
-                          type="password"
-                          className="form-control"
+                          type={showPassword ? "text" : "password"}
+                          className="w-full border border-gray-300 rounded-l-md p-2 focus:outline-none focus:ring-2 focus:ring-[#3375cc] focus:border-transparent"
                           id="password"
                           defaultValue="**********"
                         />
-                        <span className="input-group-text">
-                          <img
-                            src="/img/eduriselanding/li_lock.png"
-                            alt="Lock Icon"
-                            width="24"
-                            height="24"
-                          />
-                        </span>
+                        {/* <span className="bg-gray-100 border border-gray-300 border-l-0 px-2 flex items-center">
+                                                    <img src="/img/li_lock.png" alt="Lock Icon" width="24" height="24" />
+                                                </span> */}
+                        <button
+                          type="button"
+                          className="bg-gray-100 border border-gray-300 border-l-0 rounded-r-md px-3 flex items-center"
+                          onClick={togglePasswordVisibility}
+                        >
+                          {showPassword ? (
+                            <EyeOff size={20} className="text-gray-600" />
+                          ) : (
+                            <Eye size={20} className="text-gray-600" />
+                          )}
+                        </button>
                       </div>
-                      <div className="d-flex justify-content-end mt-2">
-                        <Link to="/resetpage" className="forgot-password">
+                      <div className="flex justify-end mt-2">
+                        <Link
+                          to="/resetpage"
+                          className="text-xs text-black hover:text-[#3375cc] hover:underline"
+                        >
                           Forgot Password?
                         </Link>
                       </div>
                     </div>
-                    <div className="d-grid gap-2 mt-4">
-                      <Link
-                        to="/landingpage"
-                        className="btn btn-primary py-2 fw-bold"
-                      >
-                        Login
+                    {/* INI DIHUBUGKAN KE landingAfter.jsx */}
+                    <div className="mt-4">
+                      <Link to="/landingpage">
+                        <button
+                          type="button"
+                          className="block w-full bg-[#3375cc] hover:bg-[#295ea3] text-white font-bold py-2 px-4 rounded text-center transition duration-200"
+                          onClick={() => navigate("/home")}
+                        >
+                          Login
+                        </button>
                       </Link>
                     </div>
                     <p className="text-center mt-4">
                       Don't have an account?{" "}
-                      <Link to="/registerpage" className="signup-link">
+                      <Link
+                        to="/registerpage"
+                        className="!text-[#DDA853] font-medium hover:underline"
+                      >
                         Sign up here!
                       </Link>
                     </p>
@@ -174,11 +201,11 @@ const LoginPage = () => {
               </div>
 
               {/* Image Section */}
-              <div className="col-md-6 login-image-section">
+              <div className="hidden md:block md:w-1/2 h-full overflow-hidden">
                 <img
                   src="/img/eduriselanding/Rectangle 2.png"
                   alt="Login Image"
-                  className="login-image"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>

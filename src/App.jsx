@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -10,6 +10,7 @@ import ResetPage from "./pages/ResetPage";
 import AdminLogin from "./pages/admin/AdminLogin";
 import AdminHome from "./pages/admin/AdminHome";
 import ArtikelAdmin from "./pages/admin/ArtikelAdmin";
+import DataAdmin from "./pages/admin/dataAdminpage";
 import ProfilePage from "./pages/ProfilePage";
 
 import ScholarshipHub from "./pages/ScholarshipHub/ScholarshipHub";
@@ -44,13 +45,15 @@ import Eduevent from "./pages/Eduevent/Eduevent";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <Routes>
         {/* Admin Routes */}
         <Route path="/loginadmin" element={<AdminLogin />} />
         <Route path="/adminhome" element={<AdminHome />} />
         <Route path="/artikeladmin" element={<ArtikelAdmin />} />
+        <Route path="/data-admin" element={<DataAdmin />} />
+
 
         {/* Public Routes */}
         <Route path="/" element={<LandingBefore />} />
@@ -105,7 +108,7 @@ function App() {
         {/* Halaman lain */}
       </Routes>
 
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }
