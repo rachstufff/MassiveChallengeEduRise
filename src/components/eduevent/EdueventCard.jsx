@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom"; // Import Link
-import EdueventButton from "./EdueventBtn"; // Pastikan path benar
+import { Link } from "react-router-dom";
+import EdueventButton from "./EdueventBtn";
 
 const EdueventCard = ({
   type = "competition",
@@ -11,23 +11,21 @@ const EdueventCard = ({
   isFree = true,
   level = "nasional",
   description = "",
-  // Kembalikan prop buttonText dan buttonVariant
   buttonText = "Selengkapnya",
   buttonVariant = "primary",
   id,
 }) => {
-  // Tentukan link tujuan untuk seluruh kartu berdasarkan 'type' (kecuali tombol)
   const cardDestinationLink = type === "competition" ? `/eduevents/${id}` : "/webinardetail";
 
   return (
     <div
       className={`
         bg-white overflow-hidden transform transition-transform duration-300 hover:scale-105
-        ${type === "competition" ? "rounded-[15px] shadow-sm" : "rounded-lg shadow-sm"}
-        flex flex-col // Tambahkan flex-col untuk layout yang lebih baik
+        ${type === "competition" ? "rounded-[15px] shadow-lg" : "rounded-lg shadow-lg"} /* DI SINI PERUBAHAN UTAMANYA */
+        hover:shadow-xl transition-shadow duration-300 /* Tambahkan ini untuk efek hover */
+        flex flex-col
       `}
     >
-      {/* Gambar Event/Webinar - ini bisa diklik ke halaman detail juga */}
       <Link to={cardDestinationLink} className="block flex-shrink-0">
         <div className="p-4 flex justify-center items-center">
           <img
@@ -40,8 +38,7 @@ const EdueventCard = ({
         </div>
       </Link>
 
-      {/* Bagian Konten Kartu - ini juga bisa diklik ke halaman detail */}
-      <Link to={cardDestinationLink} className="block flex-grow p-4"> {/* flex-grow agar mengisi ruang sisa */}
+      <Link to={cardDestinationLink} className="block flex-grow p-4">
         <h3
           className={`font-poppins font-bold text-black mb-4 ${
             type === "competition" ? "text-[24px] leading-[28px]" : "text-lg leading-tight"
@@ -51,7 +48,6 @@ const EdueventCard = ({
         </h3>
 
         <div className="space-y-2">
-          {/* Tanggal Event/Webinar */}
           <div className="flex items-center">
             <img
               src={
@@ -71,7 +67,6 @@ const EdueventCard = ({
             </span>
           </div>
 
-          {/* Info Khusus Kompetisi */}
           {type === "competition" && (
             <>
               {isFree && (
@@ -99,7 +94,6 @@ const EdueventCard = ({
             </>
           )}
 
-          {/* Info Khusus Webinar */}
           {type === "Webminar" && description && (
             <p className="font-poppins text-sm leading-normal text-gray-700 mt-2 line-clamp-3">
               {description}
@@ -108,9 +102,8 @@ const EdueventCard = ({
         </div>
       </Link>
 
-      {/* Tombol "Selengkapnya" atau "Lihat Detail" - Ini adalah tombol terpisah */}
-      <div className="p-4 pt-0 mt-auto"> {/* mt-auto untuk mendorong ke bawah */}
-        <Link to={cardDestinationLink}> {/* Link untuk tombol */}
+      <div className="p-4 pt-0 mt-auto">
+        <Link to={cardDestinationLink}>
           <EdueventButton
             variant={buttonVariant}
             className="w-full h-[40px] text-center"
@@ -123,7 +116,6 @@ const EdueventCard = ({
   );
 };
 
-// Definisi PropTypes untuk validasi props
 EdueventCard.propTypes = {
   type: PropTypes.oneOf(["competition", "Webminar"]),
   image: PropTypes.string.isRequired,
@@ -132,8 +124,8 @@ EdueventCard.propTypes = {
   isFree: PropTypes.bool,
   level: PropTypes.string,
   description: PropTypes.string,
-  buttonText: PropTypes.string, // Kembalikan buttonText
-  buttonVariant: PropTypes.oneOf(["primary", "secondary"]), // Kembalikan buttonVariant
+  buttonText: PropTypes.string,
+  buttonVariant: PropTypes.oneOf(["primary", "secondary"]),
   id: PropTypes.number.isRequired,
 };
 
