@@ -1,7 +1,9 @@
-import { useState, useMemo } from "react"; // Tambahkan useMemo jika belum ada
+import { useState, useMemo } from "react";
 import { Link } from 'react-router-dom';
-import EdueventCard from "../../components/eduevent/EdueventCard"; // Pastikan path ini benar
-import EdueventButton from "../../components/eduevent/EdueventBtn"; // Pastikan path ini benar
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer"; 
+import EdueventCard from "../../components/eduevent/EdueventCard";
+import EdueventButton from "../../components/eduevent/EdueventBtn";
 
 const CompetitionDetailPage = () => {
   const competitions = [
@@ -126,7 +128,6 @@ const CompetitionDetailPage = () => {
     const groups = {};
     filteredCompetitionsByMonth.forEach(comp => {
       const { month, year } = getMonthAndYearFromDate(comp.date);
-      // PERBAIKAN SINTAKS: Gunakan backticks untuk template literal
       const key = `${month} | ${year}`;
       if (!groups[key]) {
         groups[key] = [];
@@ -144,21 +145,22 @@ const CompetitionDetailPage = () => {
 
   return (
     <div className="bg-[#ebf1fa] min-h-screen flex flex-col">
+      {/* Menambahkan Navbar di sini */}
+      <Navbar />
+
       {/* Hero Section dengan Gambar Latar Belakang dan Filter Bulan */}
       <div
         className="relative py-16 px-4 md:px-8 lg:px-16 flex flex-col md:flex-row items-center justify-between text-white overflow-hidden"
         style={{
-          backgroundImage: 'url(/img/eduevent/bg_detail.png)', // Pastikan path gambar ini benar di folder public Anda
+          backgroundImage: 'url(/img/eduevent/bg_detail.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           minHeight: '600px'
         }}
       >
-        {/* Overlay untuk membuat teks lebih mudah dibaca dan untuk efek gradasi */}
         <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
 
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full">
-          {/* Teks Kiri */}
           <div className="text-center md:text-left mb-8 md:mb-0">
             <h1 className="font-poppins font-bold text-4xl leading-tight mb-2">
               Yuk Ikuti Kompetisi <br />
@@ -166,7 +168,6 @@ const CompetitionDetailPage = () => {
             </h1>
           </div>
 
-          {/* Kolom Filter Bulan Kanan */}
           <div
             className="rounded-lg p-6 shadow-lg text-black w-full max-w-md md:ml-auto"
             style={{
@@ -177,7 +178,6 @@ const CompetitionDetailPage = () => {
             <h2 className="font-poppins font-bold text-2xl text-white mb-4 text-center">
               Pilih Bulan Kompetisi
             </h2>
-            {/* Filter Tahun di dalam Hero Section */}
             <div className="mb-4">
               <select
                 value={activeYearFilter}
@@ -204,12 +204,11 @@ const CompetitionDetailPage = () => {
                 return (
                   <button
                     key={month.id}
-                    // PERBAIKAN SINTAKS: Gunakan backticks untuk className
                     className={`
                       w-full py-2 px-1 rounded-lg text-center font-poppins text-sm md:text-base
                       ${activeMonthFilter === month.id
-                        ? 'bg-blue-600 text-white border-2 border-blue-600'
-                        : 'bg-white text-gray-800 border border-gray-300 hover:bg-gray-100'}
+                          ? 'bg-blue-600 text-white border-2 border-blue-600'
+                          : 'bg-white text-gray-800 border border-gray-300 hover:bg-gray-100'}
                       transition-all duration-200 flex items-center justify-between
                       ${countForMonth === 0 && activeMonthFilter !== month.id ? 'opacity-50 cursor-not-allowed' : ''}
                     `}
@@ -219,7 +218,7 @@ const CompetitionDetailPage = () => {
                     <span className="flex-grow">{month.label}</span>
                     <span className="ml-1 text-xs text-right opacity-75">({countForMonth})</span>
                     <img
-                      src="/img/eduevent/img_chevronright.svg" // Pastikan path gambar ini benar
+                      src="/img/eduevent/img_chevronright.svg"
                       alt="Arrow"
                       className="w-[15px] h-[15px] ml-1 filter brightness-0 invert"
                     />
@@ -243,7 +242,6 @@ const CompetitionDetailPage = () => {
         <div className="container mx-auto px-4">
             {Object.keys(groupedCompetitionsForDisplay).length > 0 ? (
                 months.map(monthData => {
-                    // PERBAIKAN SINTAKS: Gunakan backticks untuk template literal
                     const monthKey = `${monthData.label} | ${activeYearFilter}`;
                     const competitionsInMonth = groupedCompetitionsForDisplay[monthKey];
 
@@ -255,7 +253,6 @@ const CompetitionDetailPage = () => {
                                 </h3>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                                     {competitionsInMonth.map((competition) => (
-                                        // PERBAIKAN: Ganti Card menjadi EdueventCard
                                         <EdueventCard
                                             key={competition.id}
                                             id={competition.id}
@@ -265,15 +262,12 @@ const CompetitionDetailPage = () => {
                                             date={competition.date}
                                             isFree={competition.isFree}
                                             level={competition.level}
-                                            // Asumsi EdueventCard menerima properti ini
                                         />
                                     ))}
                                 </div>
                             </div>
                         );
                     } else if (activeMonthFilter === 'all' || activeMonthFilter === monthData.id) {
-                        // Hanya tampilkan pesan 'tidak ada kompetisi' jika bulan tersebut memang aktif atau jika filter 'all'
-                        // dan tidak ada kompetisi di bulan tersebut (setelah difilter tahun)
                         return (
                             <div key={monthKey} className="mb-8 p-4 bg-white rounded-lg shadow-md">
                                 <h3 className="font-poppins font-bold text-xl text-black mb-4">
@@ -288,13 +282,15 @@ const CompetitionDetailPage = () => {
                     return null;
                 })
             ) : (
-                // Pesan ini ditampilkan jika tidak ada kompetisi sama sekali setelah filter tahun/bulan
                 <p className="text-center text-gray-600 py-8">
                     Tidak ada kompetisi ditemukan untuk tahun {activeYearFilter} dengan filter bulan yang dipilih.
                 </p>
             )}
         </div>
       </div>
+
+      {/* Menambahkan Footer di sini */}
+      <Footer />
     </div>
   );
 };
