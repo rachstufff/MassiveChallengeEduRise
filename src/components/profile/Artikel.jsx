@@ -1,39 +1,52 @@
 import React, { useState } from "react";
-import Button from "./ButtonProfile";
+// import Button from "./ButtonProfile"; // Tidak diperlukan lagi jika tombol "Lihat detail" dihapus
 
+// IMPOR SEMUA GAMBAR ARTIKEL YANG DIGUNAKAN!
+import artikel2 from "/img/eduacademy/MyIC_Article140651.jpeg";
+import artikel3 from "/img/eduacademy/bisanugas-59.jpg.webp";
+import artikel4 from "/img/eduacademy/artikel4.jpg"; // <--- TAMBAHKAN INI
+import artikel5 from "/img/eduacademy/images.jpeg"; // <--- TAMBAHKAN INI
+import artikel6 from "/img/eduacademy/5-syarat-umum-yang-harus-dikuasai-pencari-beasiswa_uiiKRqIel6.jpeg"; // <--- TAMBAHKAN INI
+
+// ====================================================================
+// KOMPONEN ArticleCard (Tidak ada perubahan signifikan di sini dari sebelumnya)
+// ====================================================================
 const ArticleCard = ({
   author,
   title,
+  source,
   hoursAgo,
   description,
   image,
-  onViewDetail,
+  link,
 }) => {
+  const footerText = hoursAgo ? `${hoursAgo} hours ago • ${source}` : source;
+
   return (
-    <div className="bg-white rounded-xl p-3 w-[280px] shadow-md flex flex-col justify-between">
-      <div className="flex items-start justify-between">
-        <div className="flex-1 pr-2">
-          <h3 className="text-sm font-bold font-poppins text-[#333] leading-snug">
-            {title}
-          </h3>
-          <p className="text-xs text-gray-500 mt-1">
-            By {author} • {hoursAgo} jam lalu
-          </p>
-        </div>
-        <img
-          src={image}
-          alt={title}
-          className="w-[70px] h-[60px] object-cover rounded-md"
-        />
-      </div>
-      <p className="text-xs text-[#5e5a5a] mt-2">{description}</p>
-      <button
-        onClick={onViewDetail}
-        className="mt-4 bg-[#3375cc] text-white text-sm font-semibold py-2 px-4 rounded-lg self-center"
-      >
-        Lihat detail
-      </button>
-    </div>
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block bg-white p-4 md:p-6 rounded-xl shadow hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+    >
+      <img
+        src={image}
+        alt={title}
+        className="w-full h-48 object-cover rounded-lg mb-4"
+      />
+
+      <h2 className="text-lg font-semibold mb-2 line-clamp-2">
+        {title}
+      </h2>
+
+      <p className="text-sm text-gray-600 mb-2 line-clamp-3">
+        {description}
+      </p>
+
+      <span className="text-xs text-gray-400">
+        {footerText}
+      </span>
+    </a>
   );
 };
 
@@ -41,67 +54,58 @@ const SavedArticles = () => {
   const [articles] = useState([
     {
       id: 1,
-      author: "Khofifah Wulandari",
-      title: "Desain UI untuk Aplikasi Edukasi",
-      hoursAgo: 2,
-      description:
-        "Proses dan prinsip desain UI yang ramah pengguna untuk aplikasi edukatif.",
-      image: "/img/profile/img_image.png",
+      image: "https://images.unsplash.com/photo-1513258496099-48168024aec0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      title: "Enam Strategi Efektif untuk Meraih Beasiswa Secara Optimal",
+      description: "Tips penting bagi mahasiswa agar bisa memperoleh beasiswa secara maksimal dan tepat sasaran.",
+      hoursAgo: "17",
+      source: "Zonamahasiswa.id",
+      link: "https://www.idntimes.com/life/education/fida-azizah/mencari-dan-mendapatkan-beasiswa-c1c2"
     },
     {
       id: 2,
-      author: "Budi Santoso",
-      title: "Membangun Website dengan HTML & CSS",
-      hoursAgo: 5,
-      description:
-        "Langkah membangun tampilan website yang responsif hanya dengan HTML & CSS.",
-      image: "/img/profile/img_image_124x220.png",
+      image: artikel2,
+      title: "Panduan Lengkap Beasiswa Dalam & Luar Negeri",
+      description: "Langkah-langkah penting dan praktis untuk mendapatkan beasiswa di dalam maupun luar negeri.",
+      source: "Beasiswakita.com",
+      link: "https://www.hotcourses.co.id/study-abroad-info/student-finance/panduan-beasiswa-fully-funded-s1-s2-s3/"
     },
     {
       id: 3,
-      author: "Sari Anindya",
-      title: "Tips Fotografi Outdoor",
-      hoursAgo: 8,
-      description: "Teknik dasar untuk hasil foto terbaik di luar ruangan.",
-      image: "/img/profile/img_image_1.png",
-    },
-    {
-      id: 4,
-      author: "Andi Prasetyo",
-      title: "Belajar React Dasar",
-      hoursAgo: 12,
-      description: "Penjelasan dasar tentang component dan state di React.",
-      image: "/img/profile/img_image.png",
+      image: artikel3,
+      title: "Cara Menulis Essay Beasiswa yang Meyakinkan",
+      description: "Strategi menulis essay yang menarik dan profesional untuk lolos seleksi beasiswa.",
+      source: "Duniadosen.com",
+      link: "https://duniadosen.com/contoh-esai-beasiswa-lengkap/"
     },
   ]);
 
-  const handleViewDetail = (id) => {
-    console.log(`Viewing details for article ${id}`);
-  };
-
-  const handleAddArticle = () => {
-    console.log("Menambah artikel baru");
-  };
-
   return (
     <div className="bg-white rounded-[15px] p-6 mb-5">
-      <h2 className="text-2xl font-semibold font-poppins text-[#17355c] mb-6">
+      <h2 className="text-xl font-semibold font-poppins text-[#17355c] mb-10">
         Artikel Tersimpan
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+      {/* Grid 3 kolom yang responsif */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {articles.map((article) => (
           <ArticleCard
             key={article.id}
-            author={article.author}
             title={article.title}
-            hoursAgo={article.hoursAgo}
             description={article.description}
             image={article.image}
-            onViewDetail={() => handleViewDetail(article.id)}
+            hoursAgo={article.hoursAgo}
+            source={article.source}
+            link={article.link}
           />
         ))}
       </div>
+
+      {/* Tombol "Lihat Lebih Banyak" jika diperlukan */}
+      {/* <div className="text-center mt-10">
+        <button className="bg-[#3375CC] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+          Lihat Lebih Banyak
+        </button>
+      </div> */}
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { CalendarDays, CheckCheck, Medal } from "lucide-react";
-import StatusModal from "./StatusModal"; // Import modal
+import StatusModal from "./StatusModal";
 
 const CompetitionCard = ({
   image,
@@ -22,18 +21,33 @@ const CompetitionCard = ({
 
       <h3 className="text-base font-bold text-[#17355c] mb-2">{title}</h3>
 
+      {/* ICON 1: Untuk Tanggal - Menggunakan Gambar */}
       <div className="flex items-center text-sm text-[#5e5a5a] mb-1">
-        <CalendarDays className="w-4 h-4 mr-2 text-[#3375cc]" />
+        <img
+          src="/img/eduevent/img_calendar.svg" // Ganti dengan path ke aset gambar ikon kalender Anda
+          alt="Tanggal"
+          className="w-4 h-4 mr-2" // Sesuaikan ukuran dan margin sesuai kebutuhan
+        />
         <span>{date}</span>
       </div>
 
+      {/* ICON 2: Untuk Informasi Biaya - Menggunakan Gambar */}
       <div className="flex items-center text-sm text-[#5e5a5a] mb-1">
-        <CheckCheck className="w-4 h-4 mr-2 text-[#3375cc]" />
+        <img
+          src="/img/eduevent/img_usercheck.svg" // Ganti dengan path ke aset gambar ikon centang Anda
+          alt="Biaya"
+          className="w-4 h-4 mr-2" // Sesuaikan ukuran dan margin sesuai kebutuhan
+        />
         <span>{feeInfo}</span>
       </div>
 
+      {/* ICON 3: Untuk Level - Menggunakan Gambar */}
       <div className="flex items-center text-sm text-[#5e5a5a] mb-4">
-        <Medal className="w-4 h-4 mr-2 text-[#3375cc]" />
+        <img
+          src="/img/eduevent/img_circle.svg" // Ganti dengan path ke aset gambar ikon piala Anda
+          alt="Level"
+          className="w-4 h-4 mr-2" // Sesuaikan ukuran dan margin sesuai kebutuhan
+        />
         <span>{level}</span>
       </div>
 

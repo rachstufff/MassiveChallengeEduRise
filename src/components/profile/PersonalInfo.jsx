@@ -36,7 +36,7 @@ const PersonalInfo = () => {
 
   return (
     <div className="bg-white rounded-[15px] p-6 mb-5 shadow">
-      <h2 className="text-2xl font-semibold font-poppins text-[#17355c] mb-6">
+      <h2 className="text-xl font-semibold font-poppins text-[#17355c] mb-6">
         Informasi Pribadi
       </h2>
 

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // <<<--- Import useNavigate
 
 const ScholarshipCard = ({ image, title, description, onViewDetail }) => {
   return (
@@ -13,7 +14,7 @@ const ScholarshipCard = ({ image, title, description, onViewDetail }) => {
       <h3 className="text-base font-bold text-[#17355c] mb-2">{title}</h3>
       <p className="text-sm text-[#5e5a5a] flex-grow">{description}</p>
       <button
-        onClick={onViewDetail}
+        onClick={onViewDetail} // Tombol ini akan memicu navigasi
         className="mt-4 bg-[#3375cc] text-white text-sm font-semibold py-2 px-4 rounded-lg self-center"
       >
         Lihat detail
@@ -23,6 +24,8 @@ const ScholarshipCard = ({ image, title, description, onViewDetail }) => {
 };
 
 const SavedScholarships = () => {
+  const navigate = useNavigate(); // <<<--- Inisialisasi useNavigate
+
   const [scholarships] = useState([
     {
       id: 1,
@@ -47,9 +50,14 @@ const SavedScholarships = () => {
     },
   ]);
 
+  // Fungsi handleViewDetail sekarang akan mengarahkan ke halaman /scholarshiphub
   const handleViewDetail = (id) => {
-    console.log(`Viewing details for scholarship ${id}`);
-    // Tempatkan navigasi ke detail beasiswa jika diperlukan
+    // Anda bisa meneruskan ID beasiswa sebagai state atau parameter URL
+    // jika halaman /scholarshiphub perlu menampilkan detail beasiswa spesifik.
+    // Contoh: navigate(`/scholarshiphub/${id}`);
+    // Atau hanya navigasi ke halaman utama scholarship hub:
+    navigate("/scholarshiphub");
+    console.log(`Navigating to /scholarshiphub for scholarship ID: ${id}`);
   };
 
   return (
@@ -64,7 +72,7 @@ const SavedScholarships = () => {
             image={item.image}
             title={item.title}
             description={item.description}
-            onViewDetail={() => handleViewDetail(item.id)}
+            onViewDetail={() => handleViewDetail(item.id)} // Panggil fungsi navigasi
           />
         ))}
       </div>
