@@ -5,19 +5,11 @@ function Klikforum() {
     <>
       <Header />
       <>
-        {/* Header */}
-        <header className="bg-white shadow">
-          <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-            <h1 className="text-xl font-bold text-[#3375CC]">
-              Forum Beasiswa Indonesia
-            </h1>
-            <a href="/forumdiskusi" className="text-blue-500 hover:underline">
-              ← Kembali
-            </a>
-          </div>
-        </header>
+
         {/* Header Section */}
-        <header className="bg-gradient-to-r from-[#265899] to-[#0D1D33] text-white py-16">
+        <header className="bg-gradient-to-r from-[#265899] to-[#0D1D33] text-white py-16"
+        style={{ background: "linear-gradient(to right, #265899, #0D1D33)" }}
+        >
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-2">#Beasiswa-Indonesia</h2>
             <p className="text-lg max-w-xl mx-auto">
