@@ -1,3 +1,5 @@
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { useState, useRef } from "react";
 import PersonalInfo from "../components/profile/PersonalInfo";
 import Education from "../components/profile/Education";
@@ -66,6 +68,7 @@ const ProfilePage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Navbar /> {/* Menambahkan komponen Navbar di sini */}
       {/* Cover Image */}
       <div className="relative w-full">
         <div className="w-full h-[316px] overflow-hidden relative">
@@ -252,6 +255,7 @@ const ProfilePage = () => {
         </div>
       )}
       {/* --- Akhir Pop-up Konfirmasi Logout --- */}
+      <Footer /> {/* Menambahkan komponen Footer di sini */}
     </div>
   );
 };
