@@ -1,5 +1,6 @@
 import Header from "../../components/Navbar";
 import Footer from "../../components/Footer";
+
 const Educonnect = () => {
   const mentors = [
     { nama: "Rizky Maulana", keahlian: "Web Development" },
@@ -14,7 +15,7 @@ const Educonnect = () => {
       <Header />
       <div className="bg-[#F9F9F9] text-black font-poppins">
         {/* Hero Section */}
-        <section className="bg-blue-950 w-full md:px-32 pt-16 pb-60 md:pb-24 px-8 mt-20 relative">
+        <section className="bg-blue-950 w-full md:px-32 pt-16 pb-60 md:pb-24 px-8 relative">
           <div className="w-full flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col md:w-[35rem] md:-mt-14 -mt-10">
               <h1 className="text-white font-semibold text-3xl md:text-5xl md:leading-snug mb-3 md:mb-2">
@@ -26,7 +27,7 @@ const Educonnect = () => {
                 beasiswa untuk terhubung, belajar, dan berkembang bersama.
               </h2>
               <a
-                href="#"
+                href="/login"
                 className="mt-10 md:mt-12 bg-blue-500 hover:bg-blue-600 px-10 text-center py-3 md:py-2 text-base rounded-lg font-bold text-white md:w-fit w-full"
               >
                 Get Started
@@ -41,18 +42,25 @@ const Educonnect = () => {
         </section>
 
         {/* Stats Section */}
-        <div className="w-full px-8 md:px-32 absolute top-[calc(100%-0rem)] md:top-[calc(100%-9rem)] left-0 right-0 z-10">
+        <div
+          className="w-full px-8 md:px-32 absolute top-[calc(100%-0rem)] md:top-[calc(100%-9rem)] left-0 right-0 z-10"
+        >
           <div
             className="flex flex-col md:flex-row justify-between h-full gap-5 md:gap-0 bg-white px-12 py-10 rounded-3xl"
             style={{ boxShadow: "0 0 6px rgba(0, 0, 0, 0.1)" }}
           >
-            <div className="flex flex-col items-center md:items-start text-center md:text-start">
+            <div
+              className="flex flex-col items-center md:items-start text-center md:text-start"
+            >
               <div className="bg-blue-500 rounded-full p-2 w-fit">
                 <img src="/img/educonnect/user.svg" alt="" />
               </div>
               <h1 className="text-2xl mt-4 font-semibold">10K Total Mentor</h1>
               <h2 className="text-sm text-gray-400 mt-2">
-                Satu Langkah Lebih Dekat dengan Mentor Impianmu
+                Satu Langkah Lebih Dekat dengan
+                <span className="hidden sm:inline"><br /></span>
+                <span className="inline sm:hidden"> </span>
+                Mentor Impianmu
               </h2>
             </div>
             <div className="flex flex-col items-center md:items-start">
@@ -61,7 +69,10 @@ const Educonnect = () => {
               </div>
               <h1 className="text-2xl mt-4 font-semibold">10K Total Mentor</h1>
               <h2 className="text-sm text-gray-400 mt-2">
-                Setiap Forum, Peluang Baru untuk Berkembang
+                Setiap Forum, Peluang Baru untuk
+                <span className="hidden sm:inline"><br /></span>
+                <span className="inline sm:hidden"> </span>
+                Berkembang
               </h2>
             </div>
             <div className="flex flex-col items-center md:items-start">
@@ -70,7 +81,10 @@ const Educonnect = () => {
               </div>
               <h1 className="text-2xl mt-4 font-semibold">10K Total Mentor</h1>
               <h2 className="text-sm text-gray-400 mt-2">
-                Belajar Bareng Komunitas Mahasiswa dari Seluruh Indonesia
+                Belajar Bareng Komunitas Mahasiswa
+                <span className="hidden sm:inline"><br /></span>
+                <span className="inline sm:hidden"> </span>
+                dari Seluruh Indonesia
               </h2>
             </div>
           </div>
