@@ -98,15 +98,15 @@ const RegistrationForm = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-2">{currentCompetition.title}</h2>
             <div className="space-y-2 text-gray-700 text-sm">
               <div className="flex items-center">
-                <img src="/img/eduevent/img_calendar.svg" alt="Calendar" className="w-[1rem] h-[1rem] mr-2 flex-shrink-0 relative -top-[8px]" />
+                <img src="/img/eduevent/img_calendar.svg" alt="Calendar" className="w-[1rem] h-[1rem] mr-2 flex-shrink-0 relative" />
                 <p className="leading-tight">{currentCompetition.date}</p>
               </div>
               <div className="flex items-center">
-                <img src="/img/eduevent/img_usercheck.svg" alt="Status" className="w-[1rem] h-[1rem] mr-2 flex-shrink-0 relative -top-[8px]" />
+                <img src="/img/eduevent/img_usercheck.svg" alt="Status" className="w-[1rem] h-[1rem] mr-2 flex-shrink-0 relative" />
                 <p className="leading-tight">{currentCompetition.isFree ? 'Gratis tanpa syarat bayar' : 'Berbayar'}</p>
               </div>
               <div className="flex items-center">
-                <img src="/img/eduevent/img_circle.svg" alt="Level" className="w-[1rem] h-[1rem] mr-2 flex-shrink-0 relative -top-[8px]" />
+                <img src="/img/eduevent/img_circle.svg" alt="Level" className="w-[1rem] h-[1rem] mr-2 flex-shrink-0 relative" />
                 <p className="leading-tight">tingkat {currentCompetition.level.charAt(0).toUpperCase() + currentCompetition.level.slice(1)}</p>
               </div>
             </div>
