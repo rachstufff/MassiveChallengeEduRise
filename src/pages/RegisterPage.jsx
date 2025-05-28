@@ -190,14 +190,7 @@ const RegisterPage = () => {
                           />
                         </span>
                       </div>
-                      <div className="flex justify-end mt-2">
-                        <Link
-                          to="/resetpage"
-                          className="text-sm text-[#3375CC] hover:underline"
-                        >
-                          Forgot Password?
-                        </Link>
-                      </div>
+                      <div className="flex justify-end mt-2"></div>
                     </div>
 
                     <div className="mt-6">
