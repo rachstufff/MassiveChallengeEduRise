@@ -41,6 +41,11 @@ import Mentoring from "./pages/Educonnect/Mentoring";
 import Forum from "./pages/Educonnect/Forum";
 
 import Eduevent from "./pages/Eduevent/Eduevent";
+import CompetitionDetailPage from "./pages/Eduevent/CompetitionDetailPage";
+import DetailCardCompetiton from "./pages/Eduevent/DetailCardCompetition";
+import RegistrationForm from "./pages/Eduevent/RegistrationForm";
+import CheckStatusPage from "./pages/Eduevent/CheckStatusPage";
+import StatusModal from "./components/profile/StatusModal";
 
 function App() {
   return (
@@ -104,6 +109,10 @@ function App() {
 
         {/* Eduevent */}
         <Route path="/eduevent" element={<Eduevent />} />
+        <Route path="/eduevents/all" element={<CompetitionDetailPage />} />
+        <Route path="/eduevents/:id" element={<DetailCardCompetiton />} />
+        <Route path="/eduevents/:id/registration" element={<RegistrationForm />} />
+        <Route path="/my-registrations" element={<StatusModal />} />
 
         {/* Halaman lain */}
       </Routes>
