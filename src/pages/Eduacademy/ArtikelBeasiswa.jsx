@@ -12,17 +12,7 @@ function Artikelbeasiswa() {
     <>
       <Header />
       <>
-        {/* Header */}
-        <header className="bg-white shadow">
-          <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-            <h1 className="text-xl font-bold text-[#3375CC]">
-              Artikel Beasiswa &amp; Pendidikan
-            </h1>
-            <a href="/artikel" className="text-[#3375CC] hover:underline">
-              ← Kembali
-            </a>
-          </div>
-        </header>
+        
 
         {/* Hero Section */}
         <section
@@ -34,7 +24,7 @@ function Artikelbeasiswa() {
             <img
               src={herobeasiswa}
               alt="Students"
-              className="w-full h-auto object-contain transform translate-y-[400px] scale-75"
+              className="w-full h-auto object-contain transform translate-y-[200px] scale-75"
             />
           </div>
           {/* Teks di kanan atas */}
