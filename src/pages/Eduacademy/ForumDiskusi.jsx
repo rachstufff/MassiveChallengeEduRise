@@ -7,32 +7,36 @@ function Forumdiskusi() {
     <>
       <Header />
       <>
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-[#265899] to-[#0D1D33] text-white min-h-screen flex items-center overflow-hidden">
-          <div className="absolute inset-0 opacity-10" />
-          <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
-            <div className="max-w-xl">
-              <h1 className="text-5xl font-bold leading-tight mb-6">
-                Your journey
-                <br />
-                <span className="text-[#DDA853]">
-                  starts with a conversation.
-                </span>
-              </h1>
-              <p className="text-lg text-gray-200 mb-8">
-                Kami menghadirkan komunitas Discord aktif sebagai ruang untuk
-                terhubung, bertanya, dan berbagi pengalaman seputar beasiswa dan
-                proses pendaftaran – dalam suasana yang ramah, suportif, dan
-                fokus pada perkembanganmu.
-              </p>
-              <a
-                href="#academy"
-                className="inline-block bg-[#3375CC] hover:bg-blue-400 text-white px-6 py-3 rounded-lg font-semibold transition"
-              >
-                Join Community
-              </a>
-            </div>
+       {/* Hero Section */}
+      <section 
+      className="relative bg-gradient-to-r from-[#265899] to-[#0D1D33] text-white min-h-screen flex items-center overflow-hidden"
+      style={{ background: "linear-gradient(to right, #265899, #0D1D33)" }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black opacity-10" />
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Text Content */}
+          <div className="max-w-xl">
+            <h1 className="text-5xl font-bold leading-tight mb-6">
+              Your journey
+              <br />
+              <span className="text-[#DDA853]">starts with a conversation.</span>
+            </h1>
+            <p className="text-lg text-gray-200 mb-8">
+              Kami menghadirkan komunitas Discord aktif sebagai ruang untuk
+              terhubung, bertanya, dan berbagi pengalaman seputar beasiswa dan
+              proses pendaftaran – dalam suasana yang ramah, suportif, dan
+              fokus pada perkembanganmu.
+            </p>
+            <a
+              href="#academy"
+              className="inline-block bg-[#3375CC] hover:bg-blue-400 text-white px-6 py-3 rounded-lg font-semibold transition"
+            >
+              Join Community
+            </a>
+          </div>
             {/* Image / Illustration */}
             <div className="flex justify-center md:justify-end">
               <img
@@ -188,7 +192,7 @@ function Forumdiskusi() {
           </div>
         </section>
       </>
-      )
+      
       <Footer />
     </>
   );
