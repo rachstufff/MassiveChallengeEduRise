@@ -10,7 +10,7 @@ function Eduacademy() {
       <Header />
       <>
         {/* Hero Section */}
-        <section className="px-6 py-20 bg-gradient-to-br from-blue-50 to-white min-h-screen flex items-center">
+        <section className="px-6 py-20 bg-white min-h-screen flex items-center">
           <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
             {/* Image Side */}
             <div className="flex-1">
@@ -34,7 +34,7 @@ function Eduacademy() {
               </p>
               <a
                 href="#more"
-                className="mt-8 inline-block bg-[#3375CC] text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-blue-700 transition duration-300 ease-in-out shadow-md hover:shadow-lg"
+                className="mt-8 inline-block bg-[#3375CC] text-white px-8 py-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition duration-300 ease-in-out shadow-md hover:shadow-lg"
               >
                 Gabung Sekarang
               </a>
@@ -44,7 +44,8 @@ function Eduacademy() {
         {/* EduAcademy Section */}
         <section
           id="more"
-          className="min-h-screen bg-gradient-to-br from-blue-50 to-white flex items-center justify-center px-4 md:px-10 py-16"
+          className="bg-white px-6 py-20 min-h-screen flex items-center"
+          
         >
           <div className="max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center">
             {/* Left: Image Card */}
@@ -152,7 +153,7 @@ function Eduacademy() {
               {/* CTA */}
               <a
                 href="#more1"
-                className="mt-8 inline-block bg-[#3375CC] text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-blue-700 transition duration-300 shadow-md hover:shadow-lg"
+                className="mt-8 inline-block bg-[#3375CC] text-white px-8 py-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition duration-300 shadow-md hover:shadow-lg"
               >
                 Explore Program EduAcademy
               </a>
@@ -160,7 +161,7 @@ function Eduacademy() {
           </div>
         </section>
         {/* Features Section */}
-        <section id="more1" className="px-6 py-20 bg-gray-50 text-center">
+        <section id="more1" className="px-6 py-20 bg-white text-center">
           <h3 className="text-2xl font-semibold text-gray-800 mb-6">
             Explore <span className="text-[#DDA853]">EduAcademy</span>!
             Persiapan beasiswa jadi mudah dan terarah
@@ -174,7 +175,7 @@ function Eduacademy() {
               </p>
               <a
                 href="/webinar"
-                className="mt-4 inline-block bg-[#3375CC] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition"
+                className="mt-4 inline-block bg-[#3375CC] text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition"
               >
                 Go to Page
               </a>
@@ -187,7 +188,7 @@ function Eduacademy() {
               </p>
               <a
                 href="/forumdiskusi"
-                className="mt-4 inline-block bg-[#3375CC] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition"
+                className="mt-4 inline-block bg-[#3375CC] text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition"
               >
                 Go to Page
               </a>
@@ -218,7 +219,7 @@ function Eduacademy() {
               </h3>
               <a
                 href="#articles"
-                className="inline-block mt-4 bg-[#3375CC] text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition"
+                className="inline-block mt-4 bg-[#3375CC] text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition"
               >
                 Explore Now
               </a>
@@ -226,7 +227,7 @@ function Eduacademy() {
           </div>
         </section>
         {/* Artikel Section */}
-        <section id="articles" className="px-6 py-20 bg-gray-50 text-center">
+        <section id="articles" className="px-6 py-20 bg-white text-center">
           <h3 className="text-2xl font-semibold mb-8">
             Biar beasiswa gak cuma wacana, baca artikel di{" "}
             <span className="text-[#DDA853]">EduAcademy</span> sekarang!
@@ -288,7 +289,7 @@ function Eduacademy() {
           <a
             href="/artikel"
             target="_blank"
-            className="mt-10 bg-[#3375CC] text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition"
+            className="mt-10 bg-[#3375CC] text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition"
           >
             {" "}
             Lihat Semua
