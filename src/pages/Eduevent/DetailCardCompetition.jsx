@@ -8,6 +8,7 @@ const DetailCardCompetiton = () => {
   const { id } = useParams();
   const [competitionDetail, setCompetitionDetail] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isSaved, setIsSaved] = useState(false); // State baru untuk status simpan
 
   // --- DATA FASILITAS DAN HADIAH UMUM ---
   const commonPrizes = [
@@ -179,12 +180,31 @@ const DetailCardCompetiton = () => {
 
     if (foundCompetition) {
       setCompetitionDetail(foundCompetition);
+      // Cek apakah kompetisi ini sudah tersimpan di localStorage
+      const savedCompetitions = JSON.parse(localStorage.getItem('savedCompetitions')) || [];
+      setIsSaved(savedCompetitions.some(comp => comp.id === foundCompetition.id));
     } else {
       setCompetitionDetail(null);
       console.warn(`Kompetisi dengan ID ${id} tidak ditemukan.`);
     }
     setLoading(false);
   }, [id]);
+
+  const handleSaveToggle = () => {
+    // Logika untuk menyimpan/menghapus kompetisi
+    let savedCompetitions = JSON.parse(localStorage.getItem('savedCompetitions')) || [];
+    if (isSaved) {
+      // Hapus dari daftar simpan
+      savedCompetitions = savedCompetitions.filter(comp => comp.id !== competitionDetail.id);
+      alert('Kompetisi dihapus dari daftar simpan!');
+    } else {
+      // Tambahkan ke daftar simpan
+      savedCompetitions.push(competitionDetail);
+      alert('Kompetisi disimpan!');
+    }
+    localStorage.setItem('savedCompetitions', JSON.stringify(savedCompetitions));
+    setIsSaved(!isSaved); // Toggle status
+  };
 
   if (loading) {
     return <div className="text-center py-10 text-xl font-semibold">Memuat detail kompetisi...</div>;
@@ -249,26 +269,49 @@ const DetailCardCompetiton = () => {
                 />
               </div>
 
-              {/* OSPN - Advance Level Section (Kotak di bawah Pamflet) - PENYESUAIAN DI SINI */}
               <div className="bg-white rounded-2xl shadow-lg p-6 flex-grow flex flex-col justify-between">
                   <div>
-                      {/* Judul Kompetisi */}
-                      <h2 className="text-2xl font-bold text-gray-900 mb-4">{competitionDetail.title}</h2>
-                      {/* Detail Kompetisi (Tanggal, Status, Level) */}
-                      <div className="space-y-2 text-gray-700 text-sm"> {/* text-sm dan space-y-2 diterapkan di sini */}
-                          <div className="flex items-center">
-                              <img src="/img/eduevent/img_calendar.svg" alt="Calendar" className="w-[1rem] h-[1rem] mr-2 flex-shrink-0 relative" />
-                              <p className="leading-tight">{competitionDetail.date}</p>
-                          </div>
-                          <div className="flex items-center">
-                              <img src="/img/eduevent/img_usercheck.svg" alt="Status" className="w-[1rem] h-[1rem] mr-2 flex-shrink-0 relative" />
-                              <p className="leading-tight">{competitionDetail.isFree ? 'Gratis tanpa syarat bayar' : 'Berbayar'}</p>
-                          </div>
-                          <div className="flex items-center">
-                              <img src="/img/eduevent/img_circle.svg" alt="Level" className="w-[1rem] h-[1rem] mr-2 flex-shrink-0 relative" />
-                              <p className="leading-tight">tingkat {competitionDetail.level.charAt(0).toUpperCase() + competitionDetail.level.slice(1)}</p>
-                          </div>
+                    {/* Judul Kompetisi dan Tombol Simpan */}
+                    <div className="flex justify-between items-center mb-4">
+                      <h2 className="text-2xl font-bold text-gray-900">{competitionDetail.title}</h2>
+                      <button
+                        onClick={handleSaveToggle}
+                        className="p-2 rounded-full hover:bg-gray-200 transition-colors duration-200"
+                        title={isSaved ? "Hapus dari Tersimpan" : "Simpan Kompetisi"}
+                      >
+                        {/* Ikon Bookmark */}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className={`h-7 w-7 ${isSaved ? 'text-blue-500 fill-current' : 'text-gray-400'}`}
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+
+                    {/* Detail Kompetisi (Tanggal, Status, Level) */}
+                    <div className="space-y-2 text-gray-700 text-sm">
+                      <div className="flex items-center">
+                          <img src="/img/eduevent/img_calendar.svg" alt="Calendar" className="w-[1rem] h-[1rem] mr-2 flex-shrink-0 relative" />
+                          <p className="leading-tight">{competitionDetail.date}</p>
                       </div>
+                      <div className="flex items-center">
+                          <img src="/img/eduevent/img_usercheck.svg" alt="Status" className="w-[1rem] h-[1rem] mr-2 flex-shrink-0 relative" />
+                          <p className="leading-tight">{competitionDetail.isFree ? 'Gratis tanpa syarat bayar' : 'Berbayar'}</p>
+                      </div>
+                      <div className="flex items-center">
+                          <img src="/img/eduevent/img_circle.svg" alt="Level" className="w-[1rem] h-[1rem] mr-2 flex-shrink-0 relative" />
+                          <p className="leading-tight">tingkat {competitionDetail.level.charAt(0).toUpperCase() + competitionDetail.level.slice(1)}</p>
+                      </div>
+                    </div>
                   </div>
                   <div className="mt-8">
                       <Link
@@ -279,7 +322,6 @@ const DetailCardCompetiton = () => {
                       </Link>
                   </div>
               </div>
-              {/* AKHIR PENYESUAIAN */}
             </div>
           </div>
 
