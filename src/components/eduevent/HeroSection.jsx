@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import EdueventButton from "./EdueventBtn";
 
 const HeroSection = () => {
+  const navigate = useNavigate(); // Harus di dalam komponen
+
   return (
     <div className="relative">
       <div className="w-full h-[709px] relative overflow-hidden">
@@ -31,6 +34,7 @@ const HeroSection = () => {
           <EdueventButton
             variant="primary"
             className="w-[295px] h-[40px] flex items-center justify-center"
+            onClick={() => navigate("/scholarshiphub")}
           >
             Selengkapnya
           </EdueventButton>
