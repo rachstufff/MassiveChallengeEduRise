@@ -62,7 +62,7 @@ const Rekomendasi = () => {
         <section className="mb-6">
           <a
             href="/scholarshiphub"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm font-semibold"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#3375CC] hover:bg-[#295ea3] text-white text-sm font-semibold rounded"
           >
             <i className="fa-solid fa-arrow-left"></i> Kembali
           </a>

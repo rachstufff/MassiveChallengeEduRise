@@ -26,7 +26,7 @@ const PopupDetail = ({ show, onClose, data, saved, onSave }) => {
               Program Berhasil Tersimpan!
             </h2>
             <button
-              className="btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+              className="w-full bg-[#3375CC] hover:bg-[#295ea3] text-white font-bold py-2 px-4 rounded transition-colors"
               onClick={onClose}
             >
               Tutup
@@ -45,16 +45,16 @@ const PopupDetail = ({ show, onClose, data, saved, onSave }) => {
             </p>
             <div className="flex gap-4">
               <button
-                className="btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                className="w-full bg-[#3375CC] hover:bg-[#295ea3] text-white font-bold py-2 px-4 rounded transition-colors"
                 onClick={onSave}
               >
                 Simpan
               </button>
               <a
                 href="#"
-                className="btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                className="w-full bg-[#3375CC] hover:bg-[#295ea3] text-white font-bold py-2 px-4 rounded transition-colors"
               >
-                Diskusi Komunitas
+                Komunitas
               </a>
             </div>
           </>

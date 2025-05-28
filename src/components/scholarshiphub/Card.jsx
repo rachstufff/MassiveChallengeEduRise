@@ -27,7 +27,7 @@ const Card = ({
         )}
 
         <button
-          className="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 font-semibold mt-auto"
+          className="w-full bg-[#3375CC] hover:bg-[#295ea3] text-white font-bold py-2 px-4 rounded transition-colors"
           onClick={() =>
             onClick({
               img,

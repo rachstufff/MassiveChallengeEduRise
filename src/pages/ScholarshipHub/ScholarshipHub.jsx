@@ -67,7 +67,7 @@ const ScholarshipHub = () => {
         <section className="text-center mt-12">
           <h1 className="text-2xl font-bold mb-4">Kamu Masih Bingung?</h1>
           <button
-            className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 font-semibold"
+            className="px-6 py-3 bg-[#3375CC] hover:bg-[#295ea3] text-white font-semibold rounded transition-colors"
             onClick={() => setShowFilterPopup(true)}
           >
             Cari Rekomendasi

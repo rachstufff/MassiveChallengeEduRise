@@ -93,7 +93,7 @@ const PopupFilter = ({ show, onClose, onFilter }) => {
           <div className="flex justify-between pt-4">
             <button
               type="submit"
-              className="btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+              className="w-full bg-[#3375CC] hover:bg-[#295ea3] text-white font-bold py-2 px-4 rounded transition-colors"
             >
               Cari Rekomendasi
             </button>
