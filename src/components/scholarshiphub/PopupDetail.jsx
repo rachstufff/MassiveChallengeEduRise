@@ -9,7 +9,7 @@ const PopupDetail = ({ show, onClose, data, saved, onSave }) => {
 
   return (
     <div
-      className={`fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4 ${
+      className={`popup-overlay fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4 ${
         show ? "block" : "hidden"
       }`}
       onClick={handleOverlayClick}
@@ -43,16 +43,16 @@ const PopupDetail = ({ show, onClose, data, saved, onSave }) => {
             <p className="text-sm text-gray-700 whitespace-pre-line mb-6">
               {data.detail}
             </p>
-            <div className="flex gap-4">
+            <div className="flex justify-center gap-4">
               <button
-                className="w-full bg-[#3375CC] hover:bg-[#295ea3] text-white font-bold py-2 px-4 rounded transition-colors"
+                className="w-40 bg-[#3375CC] hover:bg-[#295ea3] text-white font-bold py-2 px-4 rounded transition-colors"
                 onClick={onSave}
               >
                 Simpan
               </button>
               <a
-                href="#"
-                className="w-full bg-[#3375CC] hover:bg-[#295ea3] text-white font-bold py-2 px-4 rounded transition-colors"
+                href="/forumdiskusi"
+                className="w-40 bg-[#3375CC] hover:bg-[#295ea3] text-white font-bold py-2 px-4 rounded transition-colors inline-flex items-center justify-center"
               >
                 Komunitas
               </a>

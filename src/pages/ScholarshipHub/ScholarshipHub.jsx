@@ -51,7 +51,7 @@ const ScholarshipHub = () => {
         </section>
 
         {/* Daftar Beasiswa */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-screen-xl mx-auto">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-screen-xl mx-auto items-stretch">
           {filteredData.length > 0 ? (
             filteredData.map((item, index) => (
               <Card key={index} {...item} onClick={handleCardClick} />

@@ -22,8 +22,12 @@ const PopupFilter = ({ show, onClose, onFilter }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4"
-      onClick={(e) => e.target.classList.contains("popup-overlay") && onClose()}
+      className="popup-overlay fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4"
+      onClick={(e) => {
+        if (e.target.classList.contains("popup-overlay")) {
+          onClose();
+        }
+      }}
     >
       <div className="bg-white rounded-xl shadow-lg p-6 max-w-sm w-full">
         <h2 className="text-lg font-semibold mb-4">
@@ -90,19 +94,12 @@ const PopupFilter = ({ show, onClose, onFilter }) => {
             </select>
           </div>
 
-          <div className="flex justify-between pt-4">
+          <div className="flex justify-center gap-4">
             <button
               type="submit"
-              className="w-full bg-[#3375CC] hover:bg-[#295ea3] text-white font-bold py-2 px-4 rounded transition-colors"
+              className="w-56 bg-[#3375CC] hover:bg-[#295ea3] text-white font-bold py-2 px-4 rounded transition-colors"
             >
               Cari Rekomendasi
-            </button>
-            <button
-              type="button"
-              className="btn bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-400"
-              onClick={onClose}
-            >
-              Tutup
             </button>
           </div>
         </form>

@@ -9,13 +9,13 @@ const Card = ({
   onClick,
 }) => {
   return (
-    <div className="bg-blue-100 rounded-lg shadow-md flex flex-col max-w-[300px] w-full mx-auto">
+    <div className="bg-blue-100 rounded-lg shadow-md flex flex-col max-w-[300px] w-full mx-auto h-full">
       <img
         src={img}
         alt={title}
         className="w-full h-32 object-cover rounded-t-lg"
       />
-      <div className="p-4 flex flex-col flex-grow justify-between h-full">
+      <div className="p-4 flex flex-col justify-between flex-grow">
         <h2 className="font-medium text-sm md:text-base mb-2 leading-tight min-h-[3.5rem]">
           {title}
         </h2>
