@@ -40,18 +40,36 @@ const ScholarshipHub = () => {
   return (
     <>
       <Header />
-      <main className="px-6 py-10">
+      <main>
         {/* Banner */}
-        <section className="mb-10">
-          <img
-            src="/img/scholarshiphub/MainBanner.png"
-            alt="Banner Beasiswa"
-            className="w-full object-cover"
-          />
+        <section
+          className="h-[450px] flex items-stretch"
+          style={{ background: "linear-gradient(to right, #0d1d33, #265899)" }}
+        >
+          <div className="max-w-6xl mx-auto px-4 w-full flex items-stretch">
+            {/* Gambar Wanita */}
+            <div className="flex-1 flex items-end justify-center">
+              <img
+                src="/img/scholarshiphub/MainBanner.png"
+                alt="Banner EduRise"
+                className="max-h-full object-contain self-end"
+              />
+            </div>
+
+            {/* Teks Banner */}
+            <div className="flex-1 flex flex-col justify-center text-white text-center md:text-left">
+              <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+                Temukan <span className="text-[#dda853]">Beasiswa</span>
+                <br />
+                Impianmu Bersama{" "}
+                <span className="text-[#dda853] italic">EDURISE</span>
+              </h1>
+            </div>
+          </div>
         </section>
 
         {/* Daftar Beasiswa */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-screen-xl mx-auto items-stretch">
+        <section className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 w-full px-8">
           {filteredData.length > 0 ? (
             filteredData.map((item, index) => (
               <Card key={index} {...item} onClick={handleCardClick} />
@@ -64,7 +82,7 @@ const ScholarshipHub = () => {
         </section>
 
         {/* Rekomendasi CTA */}
-        <section className="text-center mt-12">
+        <section className="text-center mt-16 mb-20">
           <h1 className="text-2xl font-bold mb-4">Kamu Masih Bingung?</h1>
           <button
             className="px-6 py-3 bg-[#3375CC] hover:bg-[#295ea3] text-white font-semibold rounded transition-colors"
