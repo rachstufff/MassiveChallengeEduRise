@@ -219,7 +219,7 @@ const LandingBefore = () => {
                     professional dibidangnya
                   </p>
                   <a
-                    href="#"
+                    href="/mentoring"
                     className="text-[#3375CC] font-semibold inline-flex items-center justify-center transition duration-300 hover:text-blue-700"
                   >
                     <span className="mr-1">Mulai</span>
@@ -258,7 +258,7 @@ const LandingBefore = () => {
                     peluangmu diterima beasiswa
                   </p>
                   <a
-                    href="#"
+                    href="/artikel"
                     className="text-[#3375CC] font-semibold inline-flex items-center justify-center transition duration-300 hover:text-blue-700"
                   >
                     <span className="mr-1">Mulai</span>
@@ -297,7 +297,7 @@ const LandingBefore = () => {
                     terupdate dari sumber faktual
                   </p>
                   <a
-                    href="#"
+                    href="/scholarshiphub"
                     className="text-[#3375CC] font-semibold inline-flex items-center justify-center transition duration-300 hover:text-blue-700"
                   >
                     <span className="mr-1">Mulai</span>

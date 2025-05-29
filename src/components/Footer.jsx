@@ -41,26 +41,26 @@ const Footer = () => {
           <a href="/scholarshiphub">Scholarship Hub</a>
         </p>
         <p>
-          <a href="#">EduPrep Tools</a>
+          <a href="/eduprep-tools">EduPrep Tools</a>
         </p>
         <p>
-          <a href="#">Edurise Academy</a>
+          <a href="/eduriseacademy">Edurise Academy</a>
         </p>
         <p>
-          <a href="#">Edu Events</a>
+          <a href="/eduevent">Edu Events</a>
         </p>
         <p>
-          <a href="#">Edu Connect</a>
+          <a href="/educonnect">Edu Connect</a>
         </p>
       </div>
 
       <div className="column">
         <h3>Product</h3>
         <p>
-          <a href="#">Template CV</a>
+          <a href="/eduprep-tools/template-cv">Template CV</a>
         </p>
         <p>
-          <a href="#">Join Community</a>
+          <a href="/forumdiskusi">Join Community</a>
         </p>
         <p>
           <a href="#">Submit Feedback</a>
