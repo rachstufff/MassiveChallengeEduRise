@@ -26,7 +26,7 @@ const HeroSection = () => {
       <div className="bg-[#1f467a] py-8">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="max-w-md">
-            <h2 className="font-poppins font-bold text-[36px] leading-[46px] text-white">
+            <h2 className="font-poppins font-bold text-[30px] leading-[46px] text-white">
               Raih kesempatan untuk mendapatkan beasiswa
             </h2>
           </div>
