@@ -8,6 +8,52 @@ const Diskusi = () => {
   const [showEditModal, setShowEditModal] = useState(false);
   const [showHapusModal, setShowHapusModal] = useState(false);
 
+  const [isBookmarked1, setIsBookmarked1] = useState(false);
+  const [isBookmarked2, setIsBookmarked2] = useState(false);
+  const [isBookmarked3, setIsBookmarked3] = useState(false);
+
+  const [diskusis, setDiskusis] = useState([]);
+  const [formInput, setFormInput] = useState({
+    judul: "",
+    kategori: "",
+    link: "",
+    deskripsi: "",
+  });
+
+  const [editIndex, setEditIndex] = useState(null);
+  const [formEdit, setFormEdit] = useState({
+    judul: "",
+    kategori: "",
+    link: "",
+    deskripsi: "",
+  });
+
+  const handleEdit = (index) => {
+    setEditIndex(index);
+    setFormEdit(diskusis[index]);
+    setShowEditModal(true);
+  };
+
+  const handleUpdate = (e) => {
+    e.preventDefault();
+    const updatedDiskusis = [...diskusis];
+    updatedDiskusis[editIndex] = formEdit;
+    setDiskusis(updatedDiskusis);
+    setEditIndex(null);
+    setShowEditModal(false);
+  };
+
+  const [hapusIndex, setHapusIndex] = useState(null);
+
+  const handleDelete = () => {
+    const updatedDiskusis = [...diskusis];
+    updatedDiskusis.splice(hapusIndex, 1);
+    setDiskusis(updatedDiskusis);
+    setShowHapusModal(false);
+    setHapusIndex(null);
+  };
+
+
   return (
     <>
       <Header />
@@ -57,25 +103,26 @@ const Diskusi = () => {
                   className="flex justify-center items-center w-full bg-white rounded-xl pr-2 py-2 pl-5 shadow-sm"
                 >
                   <div className="flex flex-row justify-between items-center w-full">
-                    <p className="text-base m-0">Tambah Forum baru</p>
+                    <p className="text-base m-0">Tambah Diskusi baru</p>
                     <div className="flex items-center justify-center p-3 bg-blue-500 hover:bg-blue-600 rounded-xl h-full">
                       <img src="/img/educonnect/plus.svg" alt="Tambah" />
                     </div>
                   </div>
                 </button>
-                <button className="flex justify-center items-center bg-white rounded-xl p-2 shadow-sm">
+                <a href="/save" className="flex justify-center items-center bg-white rounded-xl p-2 shadow-sm">
                   <div className="flex items-center justify-center p-3.5 bg-yellow-400 hover:bg-yellow-500 rounded-xl">
                     <img src="/img/educonnect/bookmark.svg" alt="Bookmark" className="h-[24px] px-0.5"/>
                   </div>
-                </button>
+                </a>
               </div>
             </div>
 
             {/* List Diskusi (Dummy Data Dulu) */}
             <div className="flex flex-col gap-4">
               {/* Forum Card */}
-              <div className="w-full p-8 bg-white flex flex-col rounded-xl shadow-sm">
-                <h1 className="text-2xl font-semibold mb-3">Diskusi Masa Depan Gemilang</h1>
+              {diskusis.map((diskusi, index) => (
+              <div key={index} className="w-full p-8 bg-white flex flex-col rounded-xl shadow-sm">
+                <h1 className="text-2xl font-semibold mb-3">{diskusi.judul}</h1>
                 <div className="w-full flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <div className="relative flex items-center justify-center p-[12px]">
@@ -100,35 +147,35 @@ const Diskusi = () => {
                     </div>
                   </div>
                   <div className="px-3 py-2 text-sm bg-yellow-100 text-yellow-400 border-2 border-yellow-400 rounded-lg">
-                    Masa Depan
+                    {diskusi.kategori}
                   </div>
                 </div>
 
                 <p className="w-full text-base text-gray-500 mt-10 break-words">
-                  Hi, Guys! Selamat Datang di Forum “Masa Depan Gemilang” ✨<br/>
-                  Tempat di mana ide-ide besar bertemu, semangat belajar menyatu, dan masa depan dibentuk bersama. <br/>
-                  Di sini, kamu bisa: <br/>
-                  - Bertukar pikiran soal rencana studi, beasiswa, dan karier impian <br/>
-                  - Diskusi terbuka seputar pengembangan diri dan peluang masa depan <br/>
-                  - Dapat dukungan dari komunitas yang punya visi sejalan <br/>
-                  Jangan ragu untuk memperkenalkan diri, bertanya, atau berbagi pengalamanmu.Ayo mulai perjalanan menuju masa depan yang lebih cerah bareng komunitas EduConnect!
+                  {diskusi.deskripsi}
                 </p>
 
                 <div className="flex items-center mt-4 gap-3">
-                  <form action="" method="POST">
-                    <button
-                      type="submit"
-                      className="rounded-full bg-yellow-400 hover:bg-yellow-500 p-4"
-                    >
-                      <img
-                        src="/img/educonnect/bookmark.svg"
-                        alt=""
-                        className="h-4 scale-110"
-                      />
-                    </button>
-                  </form>
                   <button
-                    onClick={() => setShowEditModal(true)}
+                    onClick={() => setIsBookmarked1(!isBookmarked1)}
+                    className={`rounded-full p-4 transition ${
+                      isBookmarked1
+                        ? "bg-yellow-400 hover:bg-yellow-500" 
+                        : "bg-gray-200 hover:bg-gray-300"
+                    }`}
+                  >
+                    <img
+                      src={
+                        isBookmarked1
+                          ? "/img/educonnect/bookmark.svg"
+                          : "/img/educonnect/bookmark-gray.svg"
+                      }
+                      alt="bookmark 1"
+                      className="h-4 scale-110"
+                    />
+                  </button>
+                  <button
+                    onClick={() => handleEdit(index)}
                     className="flex items-center gap-2 p-3 bg-yellow-400 hover:bg-yellow-500 text-white rounded-xl"
                   >
                     <img
@@ -139,7 +186,10 @@ const Diskusi = () => {
                     Edit Diskusi
                   </button>
                   <button
-                    onClick={() => setShowHapusModal(true)}
+                    onClick={() => {
+                      setHapusIndex(index);
+                      setShowHapusModal(true);
+                    }}
                     className="p-4 bg-red-500 hover:bg-red-600 rounded-lg text-white flex items-center justify-center"
                   >
                     <i className="fas fa-trash"></i>
@@ -150,6 +200,7 @@ const Diskusi = () => {
                   </div>
                 </div>
               </div>
+              ))}
 
               <div className="w-full p-8 bg-white flex flex-col rounded-xl shadow-sm">
                 <h1 className="text-2xl font-semibold mb-3">Diskusi Anak Muda Berjaya</h1>
@@ -191,24 +242,34 @@ const Diskusi = () => {
                 </p>
 
                 <div className="flex flex-row items-center mt-4 gap-3">
-                <form action="" method="POST">
                   <button
-                    type="submit"
-                    className="rounded-full bg-gray-200 hover:bg-gray-300 p-4"
+                    onClick={() => setIsBookmarked2(!isBookmarked2)}
+                    className={`rounded-full p-4 transition ${
+                      isBookmarked2
+                        ? "bg-yellow-400 hover:bg-yellow-500" 
+                        : "bg-gray-200 hover:bg-gray-300"
+                    }`}
                   >
-                    <img src="/img/educonnect/bookmark-gray.svg" alt="" className="scale-110"/>
+                    <img
+                      src={
+                        isBookmarked2
+                          ? "/img/educonnect/bookmark.svg"
+                          : "/img/educonnect/bookmark-gray.svg"
+                      }
+                      alt="bookmark 1"
+                      className="h-4 scale-110"
+                    />
                   </button>
-                </form>
 
-                <a
-                  href="#"
-                  target="_blank"
-                  className="no-underline flex flex-row items-center justify-center p-3 bg-blue-500 hover:bg-blue-600 gap-2 text-white rounded-xl"
-                >
-                  <img src="/img/educonnect/plus-circle.svg" alt="" />
-                  Join Diskusi
-                </a>
-              </div>
+                  <a
+                    href="https://discord.com/"
+                    target="_blank"
+                    className="no-underline flex flex-row items-center justify-center p-3 bg-blue-500 hover:bg-blue-600 gap-2 text-white rounded-xl"
+                  >
+                    <img src="/img/educonnect/plus-circle.svg" alt="" />
+                    Join Diskusi
+                  </a>
+                </div>
               </div>
 
               <div className="w-full p-8 bg-white flex flex-col rounded-xl shadow-sm">
@@ -252,24 +313,34 @@ const Diskusi = () => {
                 </p>
 
                 <div className="flex flex-row items-center mt-4 gap-3">
-                <form action="" method="POST">
                   <button
-                    type="submit"
-                    className="rounded-full bg-gray-200 hover:bg-gray-300 p-4"
+                    onClick={() => setIsBookmarked3(!isBookmarked3)}
+                    className={`rounded-full p-4 transition ${
+                      isBookmarked3
+                        ? "bg-yellow-400 hover:bg-yellow-500" 
+                        : "bg-gray-200 hover:bg-gray-300"
+                    }`}
                   >
-                    <img src="/img/educonnect/bookmark-gray.svg" alt="" className="scale-110"/>
+                    <img
+                      src={
+                        isBookmarked3
+                          ? "/img/educonnect/bookmark.svg"
+                          : "/img/educonnect/bookmark-gray.svg"
+                      }
+                      alt="bookmark 1"
+                      className="h-4 scale-110"
+                    />
                   </button>
-                </form>
 
-                <a
-                  href="#"
-                  target="_blank"
-                  className="no-underline flex flex-row items-center justify-center p-3 bg-blue-500 hover:bg-blue-600 gap-2 text-white rounded-xl"
-                >
-                  <img src="/img/educonnect/plus-circle.svg" alt="" />
-                  Join Diskusi
-                </a>
-              </div>
+                  <a
+                    href="https://discord.com/"
+                    target="_blank"
+                    className="no-underline flex flex-row items-center justify-center p-3 bg-blue-500 hover:bg-blue-600 gap-2 text-white rounded-xl"
+                  >
+                    <img src="/img/educonnect/plus-circle.svg" alt="" />
+                    Join Diskusi
+                  </a>
+                </div>
               </div>
 
             </div>
@@ -283,12 +354,28 @@ const Diskusi = () => {
               <h1 className="text-2xl font-semibold text-center text-black">
                 Tambah Diskusi
               </h1>
-              <form className="mt-4 flex flex-col gap-2">
+              <form
+                className="mt-4 flex flex-col gap-2"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  if (editIndex !== null) {
+                    const updated = [...diskusis];
+                    updated[editIndex] = formInput;
+                    setDiskusis(updated);
+                    setEditIndex(null);
+                  } else {
+                    setDiskusis([...diskusis, formInput]);
+                  }
+                  setFormInput({ judul: "", kategori: "", link: "", deskripsi: "" });
+                  setShowTambahModal(false);
+                }}>
                 <label className="text-sm">Judul Diskusi</label>
                 <input
                   type="text"
                   placeholder="Judul Diskusi"
                   className="mt-1 px-4 py-3 border shadow-sm bg-blue-50 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-blue-500 block w-full rounded-full sm:text-sm focus:ring-1"
+                  value={formInput.judul}
+                  onChange={(e) => setFormInput({ ...formInput, judul: e.target.value })}
                 />
 
                 <label className="text-sm">Kategori Diskusi</label>
@@ -296,6 +383,8 @@ const Diskusi = () => {
                   type="text"
                   placeholder="Kategori Diskusi"
                   className="mt-1 px-4 py-3 border shadow-sm bg-blue-50 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-blue-500 block w-full rounded-full sm:text-sm focus:ring-1"
+                  value={formInput.kategori}
+                  onChange={(e) => setFormInput({ ...formInput, kategori: e.target.value })}
                 />
 
                 <label className="text-sm">Link</label>
@@ -303,6 +392,8 @@ const Diskusi = () => {
                   type="text"
                   placeholder="Link"
                   className="mt-1 px-4 py-3 border shadow-sm bg-blue-50 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-blue-500 block w-full rounded-full sm:text-sm focus:ring-1"
+                  value={formInput.link}
+                  onChange={(e) => setFormInput({ ...formInput, link: e.target.value })}
                 />
 
                 <label htmlFor="deskripsi" className="text-sm">
@@ -311,6 +402,8 @@ const Diskusi = () => {
                 <textarea
                   placeholder="Masukkan Deskripsi Diskusi"
                   className="px-4 py-3 border shadow-sm bg-blue-50 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-blue-500 block w-full rounded-lg sm:text-sm focus:ring-1"
+                  value={formInput.deskripsi}
+                  onChange={(e) => setFormInput({ ...formInput, deskripsi: e.target.value })}
                 />
 
                 <button
@@ -338,24 +431,30 @@ const Diskusi = () => {
               <h1 className="text-2xl font-semibold text-center text-black">
                 Edit Diskusi
               </h1>
-              <form className="mt-4 flex flex-col gap-2">
+              <form onSubmit={handleUpdate} className="mt-4 flex flex-col gap-2">
                 <label className="text-sm">Judul Diskusi</label>
                 <input
                   type="text"
                   placeholder="Judul Diskusi"
                   className="mt-1 px-4 py-3 border shadow-sm bg-blue-50 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-blue-500 block w-full rounded-full sm:text-sm focus:ring-1"
+                  value={formEdit.judul}
+                  onChange={(e) => setFormEdit({...formEdit, judul: e.target.value})}
                 />
                 <label className="text-sm">Kategori Diskusi</label>
                 <input
                   type="text"
                   placeholder="Kategori Diskusi"
                   className="mt-1 px-4 py-3 border shadow-sm bg-blue-50 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-blue-500 block w-full rounded-full sm:text-sm focus:ring-1"
+                  value={formEdit.kategori}
+                  onChange={(e) => setFormEdit({...formEdit, kategori: e.target.value})}
                 />
                 <label className="text-sm">Link</label>
                 <input
                   type="text"
                   placeholder="Link"
                   className="mt-1 px-4 py-3 border shadow-sm bg-blue-50 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-blue-500 block w-full rounded-full sm:text-sm focus:ring-1"
+                  value={formEdit.link}
+                  onChange={(e) => setFormEdit({...formEdit, link: e.target.value})}
                 />
                 <label htmlFor="deskripsi" className="text-sm">
                   Deskripsi
@@ -363,6 +462,8 @@ const Diskusi = () => {
                 <textarea
                   placeholder="Deskripsi"
                   className="px-4 py-3 border shadow-sm bg-blue-50 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-blue-500 block w-full rounded-lg sm:text-sm focus:ring-1"
+                  value={formEdit.deskripsi}
+                  onChange={(e) => setFormEdit({...formEdit, deskripsi: e.target.value})}
                 />
                 <button
                   type="submit"
@@ -391,10 +492,12 @@ const Diskusi = () => {
               </h1>
               <p className="text-center text-gray-600 mb-4">
                 Apakah Anda yakin ingin menghapus {" "}
-                <strong>Diskusi Anak Muda Berjaya</strong>?
+                <strong>{diskusis[hapusIndex]?.judul || "Diskusi"}</strong>?
               </p>
               <div className="flex justify-center gap-4">
-                <button className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-md">
+                <button
+                  onClick={handleDelete}
+                  className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-md">
                   Hapus
                 </button>
                 <button

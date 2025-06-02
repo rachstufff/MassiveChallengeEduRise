@@ -15,7 +15,7 @@ const Educonnect = () => {
       <Header />
       <div className="bg-[#F9F9F9] text-black font-poppins">
         {/* Hero Section */}
-        <section className="bg-blue-950 w-full md:px-32 pt-16 pb-60 md:pb-24 px-8 relative">
+        <section className="bg-blue-950 w-full md:px-32 pt-16 pb-60 md:pb-24 px-8 relative mb-40">
           <div className="w-full flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col md:w-[35rem] md:-mt-14 -mt-10">
               <h1 className="text-white font-semibold text-3xl md:text-5xl md:leading-snug mb-3 md:mb-2">
@@ -27,7 +27,7 @@ const Educonnect = () => {
                 beasiswa untuk terhubung, belajar, dan berkembang bersama.
               </h2>
               <a
-                href="/login"
+                href="#forum" hidden
                 className="mt-10 md:mt-12 bg-blue-500 hover:bg-blue-600 px-10 text-center py-3 md:py-2 text-base rounded-lg font-bold text-white md:w-fit w-full"
               >
                 Get Started
@@ -93,7 +93,7 @@ const Educonnect = () => {
         </div>
 
         {/* Join Forum Section */}
-        <section className="md:w-full px-8 md:px-32 py-10 mt-72 md:mt-32 flex justify-center items-center">
+        <section id="forum" className="md:w-full px-10 md:px-32 pb-10 pt-24 mt-72 md:mt-32 flex justify-center items-center">
           <div className="flex flex-col md:flex-row justify-between w-full items-center">
             <img
               src="/img/educonnect/model-forum.png"
@@ -218,7 +218,7 @@ const Educonnect = () => {
         </section>
 
         {/* Gabung dengan mentor */}
-        <section className="flex flex-col w-full py-10 mt-20 px-8 md:px-0 items-center">
+        <section className="flex flex-col w-full py-10 mt-20 px-8 md:px-0 items-center ">
           <h1 className="font-semibold text-3xl leading-snug mb-2 text-center">
             Terhubung dengan mentor & teman seperjuangan.
           </h1>
@@ -226,7 +226,7 @@ const Educonnect = () => {
             Bergabung dengan Mentor Berpengalaman dan Komunitas Pembelajar.
           </h2>
 
-          <div className="w-full overflow-x-auto px-8 md:px-32">
+          <div className="w-full overflow-x-auto px-8 md:px-32 hide-scroll mt-16">
             <div className="flex space-x-6 min-w-max pb-4">
               {mentors.map((mentor, i) => (
                 <div key={i} className="flex flex-col w-[23rem] flex-shrink-0">

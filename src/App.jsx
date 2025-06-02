@@ -39,6 +39,7 @@ import Educonnect from "./pages/Educonnect/Educonnect";
 import Diskusi from "./pages/Educonnect/Diskusi";
 import Mentoring from "./pages/Educonnect/Mentoring";
 import Forum from "./pages/Educonnect/Forum";
+import Save from "./pages/Educonnect/Save";
 
 import Eduevent from "./pages/Eduevent/Eduevent";
 import CompetitionDetailPage from "./pages/Eduevent/CompetitionDetailPage";
@@ -106,6 +107,7 @@ function App() {
         <Route path="/diskusi" element={<Diskusi />} />
         <Route path="/forum" element={<Forum />} />
         <Route path="/mentoring" element={<Mentoring />} />
+        <Route path="/save" element={<Save />} />
 
         {/* Eduevent */}
         <Route path="/eduevent" element={<Eduevent />} />
