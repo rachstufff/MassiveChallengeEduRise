@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Header from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
@@ -16,7 +15,7 @@ const TemplateCv = () => {
         <div className="bg-[#feffff] rounded-md shadow-md w-full max-w-[700px] mb-7">
           <div className="w-full">
             <img
-              src="/img/edupreptools/page4_gambar.png"
+              src="/img/edupreptools/page4_gambar.jpg"
               alt="Template CV"
               className="w-full h-auto block"
             />
@@ -24,12 +23,13 @@ const TemplateCv = () => {
         </div>
 
         <div className="text-center">
-          <Link
-            to="#"
+          <a
+            href="/public/img/edupreptools/Template_Cv.pdf"
+            download="Template_Cv.pdf"
             className="bg-[#3375cc] text-white py-2.5 px-7 text-base font-bold rounded-md cursor-pointer transition-colors duration-300 hover:bg-[#0286e6]"
           >
             Unduh Template
-          </Link>
+          </a>
         </div>
       </div>
     <Footer />

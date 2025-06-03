@@ -24,12 +24,13 @@ const TemplateMotivation = () => {
           </div>
 
           <div className="text-center">
-            <Link
-              to="#"
+            <a
+              href="/public/img/edupreptools/Template_Motlet.pdf"
+              download="Template_Motlet.pdf"
               className="bg-[#3375cc] text-white py-2.5 px-7 text-base font-bold rounded-md cursor-pointer transition-colors duration-300 hover:bg-[#0286e6] !no-underline"
             >
               Unduh Template
-            </Link>
+            </a>
           </div>
         </div>
       <Footer />
