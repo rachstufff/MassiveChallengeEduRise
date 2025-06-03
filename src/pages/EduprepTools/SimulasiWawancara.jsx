@@ -19,7 +19,7 @@ const SimulasiWawancara = () => {
           <div className="flex justify-between items-center" style={{ gap: '60px' }}>
             <div style={{ flex: '1' }}>
               <h1 
-                className="mb-4"
+                className="mb-4 font-bold"
                 style={{ 
                   fontSize: '36px',
                   color: '#dda853'
