@@ -8,10 +8,6 @@ const Mentoring = () => {
   const [showEditModal, setShowEditModal] = useState(false);
   const [showHapusModal, setShowHapusModal] = useState(false);
 
-  const [isBookmarked1, setIsBookmarked1] = useState(false);
-  const [isBookmarked2, setIsBookmarked2] = useState(false);
-  const [isBookmarked3, setIsBookmarked3] = useState(false);
-
   const [mentorings, setMentorings] = useState([]);
     const [formInput, setFormInput] = useState({
       judul: "",
@@ -110,11 +106,6 @@ const Mentoring = () => {
                   </div>
                 </div>
               </button>
-              <a href="/save" className="flex justify-center items-center bg-white rounded-xl p-2 shadow-sm">
-                <div className="flex items-center justify-center p-3.5 bg-yellow-400 hover:bg-yellow-500 rounded-xl">
-                  <img src="/img/educonnect/bookmark.svg" alt="Bookmark" className="h-[24px] px-0.5"/>
-                </div>
-              </a>
             </div>
           </div>
 
@@ -176,26 +167,6 @@ const Mentoring = () => {
               </p>
 
               <div className="flex flex-row items-center mt-4 gap-3">
-                <button
-                  onClick={() => setIsBookmarked1(!isBookmarked1)}
-                  className={`rounded-full p-4 transition ${
-                    isBookmarked1
-                      ? "bg-yellow-400 hover:bg-yellow-500" 
-                      : "bg-gray-200 hover:bg-gray-300"
-                  }`}
-                >
-                  <img
-                    src={
-                      isBookmarked1
-                        ? "/img/educonnect/bookmark.svg"
-                        : "/img/educonnect/bookmark-gray.svg"
-                    }
-                    alt="bookmark 1"
-                    className="h-4 scale-110"
-                  />
-                </button>
-
-
                 <button
                   onClick={() => handleEdit(index)}
                   className="flex items-center gap-2 p-3 bg-yellow-400 hover:bg-yellow-500 text-white rounded-xl"
@@ -272,24 +243,6 @@ const Mentoring = () => {
               </p>
 
               <div className="flex items-center mt-4 gap-3">
-                <button
-                  onClick={() => setIsBookmarked2(!isBookmarked2)}
-                  className={`rounded-full p-4 transition ${
-                    isBookmarked2
-                      ? "bg-yellow-400 hover:bg-yellow-500" 
-                      : "bg-gray-200 hover:bg-gray-300"
-                  }`}
-                >
-                  <img
-                    src={
-                      isBookmarked2
-                        ? "/img/educonnect/bookmark.svg"
-                        : "/img/educonnect/bookmark-gray.svg"
-                    }
-                    alt="bookmark 1"
-                    className="h-4 scale-110"
-                  />
-                </button>
                 <a
                   href="https://discord.com/"
                   target="_blank"
@@ -349,25 +302,6 @@ const Mentoring = () => {
               </p>
 
               <div className="flex flex-row items-center mt-4 gap-3">
-                <button
-                  onClick={() => setIsBookmarked3(!isBookmarked3)}
-                  className={`rounded-full p-4 transition ${
-                    isBookmarked3
-                      ? "bg-yellow-400 hover:bg-yellow-500" 
-                      : "bg-gray-200 hover:bg-gray-300"
-                  }`}
-                >
-                  <img
-                    src={
-                      isBookmarked3
-                        ? "/img/educonnect/bookmark.svg"
-                        : "/img/educonnect/bookmark-gray.svg"
-                    }
-                    alt="bookmark 1"
-                    className="h-4 scale-110"
-                  />
-                </button>
-
                 <a
                   href="https://discord.com/"
                   target="_blank"
